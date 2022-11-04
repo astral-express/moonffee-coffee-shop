@@ -1,0 +1,135 @@
+$main-font: "Rubik", sans-serif;
+$special-font: "Courgette", sans-serif;
+$navbar-fontSize: 2em;
+
+$dark: #292b2c;
+$blue: #2d5a88;
+$lightblue: #509deb;
+$soft-brown: #ecc6a0;
+$light-brown: #f8dfc5;
+
+body {
+  font-family: $main-font;
+  font-size: 1rem;
+  color: $dark;
+  position: relative;
+}
+
+#header,
+#footer {
+  background: $soft-brown;
+  .moonffee {
+    font-family: $special-font;
+  }
+  .nav-link-borderAnim {
+    --border-color: #292b2c;
+    --border-width: 1px;
+    --bottom-distance: 0px;
+
+    color: $dark;
+    display: inline-block;
+    background-image: linear-gradient(var(--border-color), var(--border-color));
+    background-size: 0% var(--border-width);
+    background-repeat: no-repeat;
+    transition: background-size 0.3s;
+    margin: 5px 0;
+    background-position: 50% calc(100% - var(--bottom-distance));
+  }
+  .nav-link-borderAnim:hover {
+    background-size: 100% var(--border-width);
+  }
+}
+
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+
+.form-control {
+  border-end-end-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.input-group-append .btn {
+  border-start-start-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.dropdown-menu {
+  background-color: $light-brown;
+  border: 1px solid $dark;
+  --bs-dropdown-link-hover-bg: #ecc6a0;
+  --bs-dropdown-link-active-bg: transparent;
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+.navbar.header-scroll {
+  background-color: $soft-brown;
+}
+
+#hero {
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+  position: relative;
+}
+#hero:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 130%;
+  height: 96%;
+  background-color: $soft-brown;
+  opacity: 0.6;
+  z-index: -2;
+  border-radius: 0 0 50% 50%;
+  transform: translateX(-50%) translateY(18px) rotate(2deg);
+}
+#hero::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 130%;
+  height: 95%;
+  background: linear-gradient(rgba(236, 198, 160) -5%, rgba(119, 47, 26, 0.6)),
+    url(../imgs/hero_wp.jpg) center top no-repeat;
+  z-index: -2;
+  border-radius: 0 0 50% 50%;
+  transform: translateX(-50%) rotate(0deg);
+}
+#hero .carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+#hero h2 {
+    font-size: 40px!important;
+}
+
+#main {
+  margin-top: 80px;
+}
