@@ -1,103 +1,104 @@
 <?php
-$result = false;
-function invalidUID($username)
+
+function invalidUsername($userName)
 {
-    if (!preg_match('/^[a-zA-Z0-9]*$/', $username)) {
-        $result = true;
-    } else {
-        $result = false;
-    }
+    if (!preg_match('/^[a-zA-Z0-9]*$/', $userName)) $result = true;
+    else $result = false;
     return $result;
 }
 
-// function pwdValidate($pwd)
-// {
-//     $uppercase = preg_match('@[A-Z]@', $pwd);
-//     $lowercase = preg_match('@[a-z]@', $pwd);
-//     $number = preg_match('@[0-9]@', $pwd);
-//     $specialChars = preg_match('@[^\w]@', $pwd);
-
-//     if (!$uppercase || !$lowercase || !$number || !$specialChars || strlen($pwd) < 8) {
-//         echo 'Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.';
-//     } else {
-//         echo 'Strong password.';
-//     }
-// }
-
-function pwdMatch($pwd, $pwdRepeat)
+function userPwdValidate($userPwd)
 {
-    if ($pwd != $pwdRepeat) {
-        $result = true;
-    } else {
-        $result = false;
-    }
+    $uppercase = preg_match('@[A-Z]@', $userPwd);
+    $lowercase = preg_match('@[a-z]@', $userPwd);
+    $number = preg_match('@[0-9]@', $userPwd);
+    $specialChars = preg_match('@[^\w]@', $userPwd);
+
+    if (!$uppercase || !$lowercase || !$number || !$specialChars || strlen($userPwd) < 8) $result = true;
+    else $result = false;
     return $result;
 }
 
-function uidExists($conn, $username, $email)
+function pwdMatch($userPwd, $userPwdRepeat)
 {
-    $sql = "SELECT * FROM users WHERE userUID = ? OR userEmail = ?;";
+    if ($userPwd != $userPwdRepeat) $result = true;
+    else $result = false;
+    return $result;
+}
+
+function pwdCheck($conn, $userID, $chkCurrentPwd)
+{
+    $sql = "SELECT * FROM users WHERE userID = '$userID';";
+    $userData = mysqli_query($conn, $sql);
+
+    if (mysqli_num_rows($userData) > 0) {
+        while ($row = mysqli_fetch_assoc($userData)) {
+            $userPWD = $row['userPWD'];
+            $verifyPWD = password_verify($chkCurrentPwd, $userPWD);
+            return $verifyPWD;
+        }
+    } else exit(header("location: ../user_profile_edit_info.php?error=query=error"));
+}
+
+function userExists($conn, $userName, $userEmail)
+{
+    $sql = "SELECT * FROM users WHERE userName = ? OR userEmail = ?;";
     $stmt = mysqli_stmt_init($conn);
 
-    if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("location: ../signup.php?error=stmtfailed");
-        exit();
-    }
+    if (!mysqli_stmt_prepare($stmt, $sql)) exit(header("location: ../signup.php?error=stmtFailed"));
 
-    mysqli_stmt_bind_param($stmt, "ss", $username, $email);
+    mysqli_stmt_bind_param($stmt, "ss", $userName, $userEmail);
     mysqli_stmt_execute($stmt);
 
     $resultData = mysqli_stmt_get_result($stmt);
 
-    if ($row = mysqli_fetch_assoc($resultData)) {
-        return $row;
-    } else {
-        $result = false;
-        return $result;
-    }
-
+    if ($row = mysqli_fetch_assoc($resultData)) return $row;
+    else $result = false;
     mysqli_stmt_close($stmt);
+    return $result;
 }
 
-function createUser($conn, $name, $email, $username, $pwd)
+function fetchUserImageData($conn, $userID)
 {
-    $sql = "INSERT INTO users (userName, userEmail, userUID, userPWD) VALUES (?, ?, ?, ?);";
-    $stmt = mysqli_stmt_init($conn);
-
-    if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("location: ../signup.php?error=stmtfailed");
-        exit();
-    }
-
-    $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
-
-    mysqli_stmt_bind_param($stmt, "ssss", $name, $email, $username, $hashedPwd);
-    mysqli_stmt_execute($stmt);
-    mysqli_stmt_close($stmt);
-    header("location: ../signup.php?error=none");
-    exit();
+    $sql = "SELECT userUploadImageData FROM users_upload WHERE userID = '$userID';";
+    $fetchUserImgData = mysqli_query($conn, $sql);
+    $userImgDataResult = mysqli_fetch_assoc($fetchUserImgData);
+    $userImgData = $userImgDataResult["userUploadImageData"];
+    return $userImgData;
 }
 
-function loginUser($conn, $username, $pwd)
+function emailVerificationChk($conn, $userID)
 {
-    $uidExists = uidExists($conn, $username, $username);
-
-    if ($uidExists === false) {
-        header("location: ../signup.php?error=wronglogin");
-        exit();
-    }
-
-    $pwdHashed = $uidExists["userPWD"];
-    $checkPwd = password_verify($pwd, $pwdHashed);
-
-    if ($checkPwd === false) {
-        header("location: ../signup.php?error=wronglogin");
-        exit();
-    } else if ($checkPwd === true) {
-        session_start();
-        $_SESSION["userid"] = $uidExists["userID"];
-        $_SESSION["useruid"] = $uidExists["userUID"];
-        header("location: ../index.php");
-        exit();
-    }
+    $sql = "SELECT active FROM users WHERE userID = '$userID';";
+    $activeStatus = mysqli_query($conn, $sql);
+    return $activeStatus;
 }
+
+// function explodeImgFileExt($userID, $userName, $userImageData)
+// {
+//     $imgFilePath = '../uploads/' . $userID . '_' . $userName . '_' . 'userProfileImage' . $userImageData . '.' . '*';
+//     $imgFileInfo = glob($imgFilePath);
+//     $imgFileExt = explode(".", $imgFileInfo[0]);
+//     $imgFileActualExt = end($imgFileExt);
+//     return $imgFileActualExt;
+// }
+
+// function fetchUserData($conn, $userID)
+// {
+//     $sql = "SELECT * FROM users WHERE userID = '$userID';";
+//     $userData = mysqli_query($conn, $sql);
+
+//     if (mysqli_num_rows($userData) > 0) {
+//         while ($row = mysqli_fetch_assoc($userData)) {
+//             $userID = $row['userID'];
+//             $sqlUserImageFetch = "SELECT * FROM users_upload WHERE ID = '$userID';";
+//             $userImageResult = mysqli_query($conn, $sqlUserImageFetch);
+//             while ($rowImage = mysqli_fetch_assoc($userImageResult)) {
+//                 if ($rowImage['uploadstatus'] == 1) $result = true;
+//                 else $result = false;
+//                 return $result;
+//             }
+//         }
+
+//     } else exit(header("location: ../user_profile.php?query=error"));
+// }

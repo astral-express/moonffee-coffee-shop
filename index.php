@@ -1,55 +1,258 @@
 <?php
+include_once 'head.php';
 include_once 'header.php';
 ?>
-<!-- <section>
-        <?php
-        if (isset($_SESSION["useruid"])) {
-            echo "<p>Hello there " . $_SESSION["useruid"] . "</p>";
-        }
-        ?>
-    </section> -->
 <section id="hero" class="d-flex justify-content-center align-items-center">
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <div class="container">
+        <div class="hero-box text-center text-white hidden">
+            <h1 class="moonffee-font fw-bold display-1">Moonffee</h1>
+            <h3 class="moonffee-font fw-bold">Coffee shop</h3>
+            <hr>
+            <p class="fw-bold fs-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque officia, laudantium quidem exercitationem nemo quod in assumenda harum ea debitis? Dolores, quidem autem corrupti maiores iusto recusandae voluptate.</p>
+            <a href="#" class="btn btn-dark rounded-pill border border-white fw-bold p-3 px-4 my-3 mt-3">READ MORE</a>
         </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="carousel-container">
-                    <h2>Welcome to <span>Moonffee</span></h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima ut nostrum corrupti incidunt. Voluptatem quo molestias explicabo ipsa architecto velit culpa excepturi facere. Tempore veritatis, dolor magnam ea minus incidunt vitae! Architecto officia quidem consequatur sunt nemo. Aliquam omnis eius earum mollitia cum odit voluptatibus impedit explicabo perspiciatis libero sit similique quidem, sunt officiis veritatis consectetur aspernatur laboriosam est recusandae. Expedita, doloremque repellendus eum exercitationem veritatis facere. Repellendus quisquam, laudantium voluptatum fugit tempora officia quae! Dolore placeat ad odit, soluta ipsum quos iusto praesentium qui expedita cumque optio repudiandae accusantium voluptatum nobis, fugiat cupiditate nesciunt magnam possimus laudantium culpa labore!</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="carousel-container">
-                    <h1>Want to try our special <span>Moonffee?</span></h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae hic at iure dolorum vel non. Id vel aperiam hic natus amet molestias ea nihil expedita laudantium reiciendis in dignissimos recusandae vero reprehenderit veniam voluptatum error laboriosam accusantium fuga eligendi maiores, officia, quod labore magnam. Aspernatur tempora est quam minima nam.</p>
-                    <a class="btn btn-primary">Check out Moonffee</a>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="carousel-container">
-                    <h1>About us and what's our goal</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis commodi repudiandae sequi sunt eius voluptate qui quod voluptatum voluptas beatae? Quasi ut rerum nihil eius accusamus repellendus a quas nisi magnam nam aliquid neque minima explicabo doloremque architecto, excepturi vero! Optio incidunt saepe, odit quas tenetur exercitationem, nobis autem explicabo culpa quisquam aut consectetur praesentium fuga et illum. Impedit perspiciatis sit fuga natus voluptates recusandae numquam sequi fugiat earum minima, quod perferendis magnam quasi rerum vel error dolorum praesentium? Obcaecati?</p>
-                    <a class="btn btn-primary">Read more about us</a>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
 </section>
-<main id="main">
 
-</main>
+<section id="moonffee-short-about">
+    <div class="container p-5">
+        <div class="text-center">
+            <h1 class="moonffee-font fw-bold display-3 hidden">The family-owned coffee shop</h1>
+            <p class="text-secondary fs-5 my-4 v hidden"><i>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate velit ipsum, illum quod maiores minima numquam alias quo natus quia voluptates voluptatum omnis non perspiciatis sint delectus iure officia impedit ipsa architecto repellendus eaque consequuntur quaerat. Fugit iusto ratione eligendi?</i></p>
+            <a href="#" class="btn btn-dark rounded-pill border border-white fw-bold p-3 px-4 my-3 mt-3 hidden">OUR VALUES</a>
+        </div>
+    </div>
+</section>
+
+<section id="moonffee-coffee-categories">
+    <div class="container p-5">
+        <div class="row row-cols-auto row-cols-md-2">
+            <div class="col hidden">
+                <div class="moonffee-shop-items text-white m-3 p-4">
+                    <img src="assets/bread_icon.png" alt="bread_icon">
+                    <h3 class="moonffee-font fw-bold mt-3">Bread</h3>
+                    <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, laborum.</p>
+                    <a href="#" class="moonffee-font text-white fs-5">Learn more</a>
+                </div>
+            </div>
+            <div class="col hidden">
+                <div class="moonffee-shop-items text-white m-3 p-4">
+                    <img src="assets/pastries_icon.png" alt="pastries_icon">
+                    <h3 class="moonffee-font fw-bold mt-3">Pasteries</h3>
+                    <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, laborum.</p>
+                    <a href="#" class="moonffee-font text-white fs-5">Learn more</a>
+                </div>
+            </div>
+            <div class="col hidden">
+                <div class="moonffee-shop-items text-white m-3 p-4">
+                    <img src="assets/cake_icon.png" alt="cake_icon">
+                    <h3 class="moonffee-font fw-bold mt-3">Cakes</h3>
+                    <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, laborum.</p>
+                    <a href="#" class="moonffee-font text-white fs-5">Learn more</a>
+                </div>
+            </div>
+            <div class="col hidden">
+                <div class="moonffee-shop-items text-white m-3 p-4">
+                    <img src="assets/cookie_icon.png" alt="cookie_icon">
+                    <h3 class="moonffee-font fw-bold mt-3 ">Cookies</h3>
+                    <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, laborum.</p>
+                    <a href="#" class="moonffee-font text-white fs-5">Learn more</a>
+                </div>
+            </div>
+        </div>
+</section>
+
+<section id="moonffee-coffee-types">
+    <div class="container p-5">
+        <h1 class="moonffee-font fw-bold display-3 text-center my-3 hidden">Our Special Home Made Offers</h1>
+        <h4 class="moonffee-font text-center mt-3 mb-5 hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit possimus blanditiis beatae fugit eligendi eum doloribus excepturi tempore sunt maxime!</h4>
+        <div class="row row-cols-auto row-cols-md-2 row-cols-lg-3">
+            <div class="col hidden">
+                <div class="card m-3">
+                    <img src="assets/coffee_card_example.webp" class="card-img-top" alt="coffee_card_img">
+                    <div class="card-body">
+                        <h4 class="card-title moonffee-font fw-bold"><u>Americano</u></h4>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                        <hr>
+                        <div class="d-flex align-items-center">
+                            <h5 class="moonffee-font fw-bold align-items-center">€3.25<span class="text-secondary ms-1 fs-6"> per cup</span></h5>
+                            <button class="btn btn-dark rounded-pill border border-white ms-auto">Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col hidden">
+                <div class="card m-3">
+                    <img src="assets/coffee_card_example.webp" class="card-img-top" alt="coffee_card_img">
+                    <div class="card-body">
+                        <h4 class="card-title moonffee-font fw-bold"><u>Café au Lait</u></h4>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                        <hr>
+                        <div class="d-flex align-items-center">
+                            <h5 class="moonffee-font fw-bold align-items-center">€5.00<span class="text-secondary ms-1 fs-6"> per cup</span></h5>
+                            <button class="btn btn-dark rounded-pill border border-white ms-auto">Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col hidden">
+                <div class="card m-3">
+                    <img src="assets/coffee_card_example.webp" class="card-img-top" alt="coffee_card_img">
+                    <div class="card-body">
+                        <h4 class="card-title moonffee-font fw-bold"><u>Latte</u></h4>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                        <hr>
+                        <div class="d-flex align-items-center">
+                            <h5 class="moonffee-font fw-bold align-items-center">€7.45<span class="text-secondary ms-1 fs-6"> per cup</span></h5>
+                            <button class="btn btn-dark rounded-pill border border-white ms-auto">Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col hidden">
+                <div class="card m-3">
+                    <img src="assets/coffee_card_example.webp" class="card-img-top" alt="coffee_card_img">
+                    <div class="card-body">
+                        <h4 class="card-title moonffee-font fw-bold"><u>Cappuccino</u></h4>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                        <hr>
+                        <div class="d-flex align-items-center">
+                            <h5 class="moonffee-font fw-bold align-items-center">€2.85<span class="text-secondary ms-1 fs-6"> per cup</span></h5>
+                            <button class="btn btn-dark rounded-pill border border-white ms-auto">Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col hidden">
+                <div class="card m-3">
+                    <img src="assets/coffee_card_example.webp" class="card-img-top" alt="coffee_card_img">
+                    <div class="card-body">
+                        <h4 class="card-title moonffee-font fw-bold"><u>Espresso</u></h4>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                        <hr>
+                        <div class="d-flex align-items-center">
+                            <h5 class="moonffee-font fw-bold align-items-center">€4.45<span class="text-secondary ms-1 fs-6"> per cup</span></h5>
+                            <button class="btn btn-dark rounded-pill border border-white ms-auto">Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col hidden">
+                <div class="card m-3">
+                    <img src="assets/coffee_card_example.webp" class="card-img-top" alt="coffee_card_img">
+                    <div class="card-body">
+                        <h4 class="card-title moonffee-font fw-bold"><u>Mocha</u></h4>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                        <hr>
+                        <div class="d-flex align-items-center">
+                            <h5 class="moonffee-font fw-bold align-items-center">€10.15<span class="text-secondary ms-1 fs-6"> per cup</span></h5>
+                            <button class="btn btn-dark rounded-pill border border-white ms-auto">Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="moonffee-coffee-filler" class="d-flex align-items-center text-center">
+    <div class="container p-5">
+        <div class="d-flex flex-column text-white hidden">
+            <h1 class="moonffee-font fw-bold display-3 hidden">Lorem Ipsum</h1>
+            <h4 class="my-5"><i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quibusdam nam quidem qui ipsam laudantium totam accusamus laboriosam sit dignissimos.</i></h4>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 hidden">
+                <div class="col">
+                    <a href="#" class="btn btn-dark rounded-pill border border-white fw-bold p-3 px-4 my-3">COFFEES</a>
+                </div>
+                <div class="col">
+                    <a href="#" class="btn btn-dark rounded-pill border border-white fw-bold p-3 px-4 my-3">BAKERY</a>
+                </div>
+                <div class="col">
+                    <a href="#" class="btn btn-dark rounded-pill border border-white fw-bold p-3 px-4 my-3">CAFE</a>
+                </div>
+                <div class="col">
+                    <a href="#" class="btn btn-dark rounded-pill border border-white fw-bold p-3 px-4 my-3">CATERING</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="moonffee-story-about">
+    <div class="container p-5">
+        <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col d-flex flex-column my-5 hidden">
+                <img src="assets/coffee_with_heart_drawn_foam.jpg" alt="coffee-with-heart-drawn-foam">
+                <div class="pe-3 mt-4">
+                    <h3 class="moonffee-font fw-bold">Our Story</h3>
+                    <p><i>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta, molestiae. Id rerum fugiat ab veritatis sunt vitae assumenda libero harum! Tenetur ullam fugit dolore neque impedit? Explicabo inventore facere, fugit provident ea voluptate distinctio error id tempore dicta ullam et.</i></p>
+                    <a href="#" class="btn btn-dark rounded-pill border border-white fw-bold p-2 px-4">Learn more</a>
+                </div>
+            </div>
+            <div class="col d-flex flex-column my-5 hidden">
+                <img src="assets/coffee_with_heart_drawn_foam.jpg" alt="coffee-with-heart-drawn-foam">
+                <div class="pe-3 mt-4">
+                    <h3 class="moonffee-font fw-bold">Our Coffee</h3>
+                    <p><i>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta, molestiae. Id rerum fugiat ab veritatis sunt vitae assumenda libero harum! Tenetur ullam fugit dolore neque impedit? Explicabo inventore facere, fugit provident ea voluptate distinctio error id tempore dicta ullam et.</i></p>
+                    <a href="#" class="btn btn-dark rounded-pill border border-white fw-bold p-2 px-4">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="moonffee-coffee-gallery">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4">
+        <div class="col hidden">
+            <img src="assets/coffee_machine_bar.jpg" alt="coffee_gallery_img">
+        </div>
+        <div class="col hidden">
+            <img src="assets/close_up_hands_making_coffee.jpg" alt="coffee_gallery_img">
+        </div>
+        <div class="col hidden">
+            <img src="assets/coffee_card_example.webp" alt="coffee_gallery_img">
+        </div>
+        <div class="col hidden">
+            <img src="assets/coffee_card_example_2.jpg" alt="coffee_gallery_img">
+        </div>
+    </div>
+</section>
+
+<section id="moonffee-storing-about">
+    <div class="container p-5">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <div class="text-center">
+                <h1 class="moonffee-font fw-bold display-3 mb-4 hidden">Keeping & Storing</h1>
+                <p class="mx-5 pb-4 hidden"><i>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem maiores earum corporis omnis. Fuga consequatur eos facilis deserunt quo quia voluptas. Cumque amet, inventore error quae et harum illum adipisci laboriosam, dolor pariatur debitis alias sunt! Aperiam nemo animi quia dolorum totam accusantium doloribus aliquam expedita. Explicabo natus voluptatum nemo veniam saepe reprehenderit, qui, consectetur illo enim illum ducimus consequuntur.</i></p>
+            </div>
+            <img src="assets/coffee_in_a_bag.webp" alt="storing_coffee" class="hidden">
+        </div>
+    </div>
+</section>
+
+<section id="moonffee-shop-info">
+    <div class="container p-5">
+        <div class="d-flex flex-column flex-md-row text-white justify-content-center align-items-center">
+            <div class="moonffee-work-time text-center fw-bold p-5 fs-5 hidden">
+                <h1 class="moonffee-font disaply-3">Hours & Location</h1>
+                <p class="my-3">350 5th Ave, New York, NY 10118</p>
+                <a href="tel:1 212-736-3100" class="text-white">1 212-736-3100</a>
+                <p class="mt-3 mb-1"><i>Monday - Friday</i></p>
+                <p><i>7:00am - 8:00pm</i></p>
+            </div>
+            <div class="moonffee-services text-left fw-bold p-5 ps-3 hidden">
+                <ul class="list-group">
+                    <li class="list-item">In-store Dining</li>
+                    <li class="list-item">Outdoor Dining</li>
+                    <li class="list-item">Open Seating</li>
+                    <li class="list-item">Take Out Free Wifi</li>
+                    <li class="list-item">Delivery</li>
+                    <li class="list-item">ADA-Accessible</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
 <?php
 include_once 'footer.php';
 ?>

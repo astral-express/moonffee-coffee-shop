@@ -1,0 +1,121 @@
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transition: 400ms;
+}
+
+.show {
+  filter: blur(0);
+  opacity: 1;
+}
+
+#moonffee-coffee-categories div.hidden,
+#moonffee-coffee-filler h1.hidden,
+#moonffee-coffee-filler h4.hidden,
+#moonffee-coffee-filler div.hidden,
+#moonffee-shop-info div.hidden,
+.user-welcome-title.hidden,
+.hero-box.hidden {
+  transform: translateX(-10%);
+}
+
+#moonffee-coffee-categories div:nth-child(2).hidden,
+#moonffee-coffee-categories div:nth-child(4).hidden,
+#moonffee-storing-about h1.hidden,
+#moonffee-storing-about p.hidden,
+#moonffee-storing-about img.hidden {
+  transform: translateX(10%);
+}
+
+#moonffee-coffee-categories div.show,
+#moonffee-coffee-categories div:nth-child(2).show,
+#moonffee-coffee-categories div:nth-child(4).show,
+#moonffee-coffee-filler h1.show,
+#moonffee-coffee-filler h4.show,
+#moonffee-coffee-filler div.show,
+#moonffee-storing-about h1.show,
+#moonffee-storing-about p.show,
+#moonffee-storing-about img.show,
+#moonffee-shop-info div.show,
+.user-welcome-title.show,
+.hero-box.show {
+  transform: translateX(0);
+}
+
+.navbar.hidden,
+.hero-box.hidden {
+  transform: translateY(-10%);
+}
+
+#moonffee-coffee-types div.col.hidden,
+#moonffee-short-about h1.hidden,
+#moonffee-short-about p.hidden,
+#moonffee-short-about a.hidden,
+#moonffee-coffee-types h1.hidden,
+#moonffee-coffee-types h4.hidden,
+#moonffee-story-about div.col.hidden,
+#moonffee-coffee-gallery div.col.hidden,
+.footer-links.hidden,
+.profile-page-container.hidden,
+.copyright.hidden .footer-logo.hidden {
+  transform: translateY(10%);
+}
+
+#moonffee-short-about h1.show,
+#moonffee-short-about p.show,
+#moonffee-short-about a.show,
+#moonffee-coffee-types h1.show,
+#moonffee-coffee-types h4.show,
+#moonffee-coffee-types div.col.show,
+#moonffee-story-about div.col.show,
+#moonffee-coffee-gallery div.col.hidden,
+.footer-links.show,
+.profile-page-container.show,
+.copyright.show,
+.profile-page-container.show,
+.navbar.show,
+.hero-box.show .footer-logo.show {
+  transform: translateY(0);
+}
+
+#moonffee-story-about div:nth-child(2).col.hidden {
+  transition-delay: 100ms;
+}
+
+#moonffee-story-about div:nth-child(2).col.hidden,
+#moonffee-coffee-types div:nth-child(2).col.hidden,
+#moonffee-coffee-types div:nth-child(5).col.hidden,
+#moonffee-coffee-gallery div:nth-child(2).col.hidden,
+.hero-box.hidden {
+  transition-delay: 200ms;
+}
+
+#moonffee-coffee-types div:nth-child(3).col.hidden,
+#moonffee-coffee-types div:nth-child(6).col.hidden,
+#moonffee-coffee-gallery div:nth-child(3).col.hidden {
+  transition-delay: 400ms;
+}
+
+#moonffee-coffee-gallery div:nth-child(4).col.hidden {
+  transition-delay: 600ms;
+}
+
+// #moonffee-short-about h1.hidden,
+// #moonffee-short-about p.hidden,
+// #moonffee-short-about a.hidden,
+// #moonffee-coffee-categories div.hidden,
+// #moonffee-coffee-types h1.hidden,
+// #moonffee-coffee-types h4.hidden,
+// #moonffee-coffee-types div.col.hidden,
+// #moonffee-coffee-filler h1.hidden,
+// #moonffee-coffee-filler h4.hidden,
+// #moonffee-coffee-filler div.hidden,
+// #moonffee-story-about div.col.hidden,
+// #moonffee-coffee-gallery div.col.hidden,
+// #moonffee-storing-about h1.hidden,
+// #moonffee-storing-about p.hidden,
+// #moonffee-storing-about img.hidden,
+// #moonffee-shop-info div.hidden,
+// .footer-links.hidden .copyright.hidden {
+//   transition: 800ms;
+// }

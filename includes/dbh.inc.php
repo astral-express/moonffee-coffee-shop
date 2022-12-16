@@ -1,12 +1,10 @@
 <?php
 
-$servername = "localhost";
-$dBUID = "root";
-$dBPWD = "";
-$dBName = "coffee_shop";
+$serverName = "localhost";
+$dB_UID = "root";
+$dB_PWD = "";
+$dB_Name = "php_shop";
 
-$conn = mysqli_connect($servername, $dBUID, $dBPWD, $dBName);
+$conn = mysqli_connect($serverName, $dB_UID, $dB_PWD, $dB_Name);
 
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+if (!$conn) die("Connection failed: " . mysqli_connect_error());
