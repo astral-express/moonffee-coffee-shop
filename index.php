@@ -14,7 +14,7 @@ include_once 'header.php';
     </div>
 </section>
 
-<section id="moonffee-short-about">
+<section id="moonffee_short_about">
     <div class="container p-5">
         <div class="text-center">
             <h1 class="moonffee-font fw-bold display-3 hidden">The family-owned coffee shop</h1>
@@ -24,36 +24,36 @@ include_once 'header.php';
     </div>
 </section>
 
-<section id="moonffee-coffee-categories">
+<section id="moonffee_coffee_categories">
     <div class="container p-5">
         <div class="row row-cols-auto row-cols-md-2">
             <div class="col hidden">
-                <div class="moonffee-shop-items text-white m-3 p-4">
-                    <img src="assets/bread_icon.png" alt="bread_icon">
+                <div class="moonffee_shop_items text-white m-3 p-4">
+                    <img src="assets/bread_icon.webp" alt="Bread icon">
                     <h3 class="moonffee-font fw-bold mt-3">Bread</h3>
                     <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, laborum.</p>
                     <a href="#" class="moonffee-font text-white fs-5">Learn more</a>
                 </div>
             </div>
             <div class="col hidden">
-                <div class="moonffee-shop-items text-white m-3 p-4">
-                    <img src="assets/pastries_icon.png" alt="pastries_icon">
+                <div class="moonffee_shop_items text-white m-3 p-4">
+                    <img src="assets/pastries_icon.webp" alt="Pastries icon">
                     <h3 class="moonffee-font fw-bold mt-3">Pasteries</h3>
                     <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, laborum.</p>
                     <a href="#" class="moonffee-font text-white fs-5">Learn more</a>
                 </div>
             </div>
             <div class="col hidden">
-                <div class="moonffee-shop-items text-white m-3 p-4">
-                    <img src="assets/cake_icon.png" alt="cake_icon">
+                <div class="moonffee_shop_items text-white m-3 p-4">
+                    <img src="assets/cake_icon.webp" alt="Cake icon">
                     <h3 class="moonffee-font fw-bold mt-3">Cakes</h3>
                     <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, laborum.</p>
                     <a href="#" class="moonffee-font text-white fs-5">Learn more</a>
                 </div>
             </div>
             <div class="col hidden">
-                <div class="moonffee-shop-items text-white m-3 p-4">
-                    <img src="assets/cookie_icon.png" alt="cookie_icon">
+                <div class="moonffee_shop_items text-white m-3 p-4">
+                    <img src="assets/cookie_icon.webp" alt="Cookie icon">
                     <h3 class="moonffee-font fw-bold mt-3 ">Cookies</h3>
                     <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, laborum.</p>
                     <a href="#" class="moonffee-font text-white fs-5">Learn more</a>
@@ -62,14 +62,14 @@ include_once 'header.php';
         </div>
 </section>
 
-<section id="moonffee-coffee-types">
+<section id="moonffee_coffee_types">
     <div class="container p-5">
         <h1 class="moonffee-font fw-bold display-3 text-center my-3 hidden">Our Special Home Made Offers</h1>
         <h4 class="moonffee-font text-center mt-3 mb-5 hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit possimus blanditiis beatae fugit eligendi eum doloribus excepturi tempore sunt maxime!</h4>
         <div class="row row-cols-auto row-cols-md-2 row-cols-lg-3">
             <div class="col hidden">
                 <div class="card m-3">
-                    <img src="assets/coffee_card_example.webp" class="card-img-top" alt="coffee_card_img">
+                    <img src="assets/coffee_card_example_small.webp" class="card-img-top" alt="Coffee beans with coffee cup on the table" srcset="assets/coffee_card_example_large.webp 1200w, assets/coffee_card_example_medium.webp 700w, assets/coffee_card_example_small.webp 340w" sizes="(min-width: 1400px) 358px, (min-width: 1200px) 298px, (min-width: 1000px) 238px, (min-width: 780px) 266px, (min-width: 580px) 410px, calc(100vw - 130px)">
                     <div class="card-body">
                         <h4 class="card-title moonffee-font fw-bold"><u>Americano</u></h4>
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
@@ -83,7 +83,7 @@ include_once 'header.php';
             </div>
             <div class="col hidden">
                 <div class="card m-3">
-                    <img src="assets/coffee_card_example.webp" class="card-img-top" alt="coffee_card_img">
+                    <img src="assets/coffee_card_example_small.webp" class="card-img-top" alt="Coffee beans with coffee cup on the table" srcset="assets/coffee_card_example_large.webp 1200w, assets/coffee_card_example_medium.webp 700w, assets/coffee_card_example_small.webp 340w" sizes="(min-width: 1400px) 358px, (min-width: 1200px) 298px, (min-width: 1000px) 238px, (min-width: 780px) 266px, (min-width: 580px) 410px, calc(100vw - 130px)">
                     <div class="card-body">
                         <h4 class="card-title moonffee-font fw-bold"><u>Café au Lait</u></h4>
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
@@ -97,7 +97,7 @@ include_once 'header.php';
             </div>
             <div class="col hidden">
                 <div class="card m-3">
-                    <img src="assets/coffee_card_example.webp" class="card-img-top" alt="coffee_card_img">
+                    <img src="assets/coffee_card_example_small.webp" class="card-img-top" alt="Coffee beans with coffee cup on the table" srcset="assets/coffee_card_example_large.webp 1200w, assets/coffee_card_example_medium.webp 700w, assets/coffee_card_example_small.webp 340w" sizes="(min-width: 1400px) 358px, (min-width: 1200px) 298px, (min-width: 1000px) 238px, (min-width: 780px) 266px, (min-width: 580px) 410px, calc(100vw - 130px)">
                     <div class="card-body">
                         <h4 class="card-title moonffee-font fw-bold"><u>Latte</u></h4>
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
@@ -111,7 +111,7 @@ include_once 'header.php';
             </div>
             <div class="col hidden">
                 <div class="card m-3">
-                    <img src="assets/coffee_card_example.webp" class="card-img-top" alt="coffee_card_img">
+                    <img src="assets/coffee_card_example_small.webp" class="card-img-top" alt="Coffee beans with coffee cup on the table" srcset="assets/coffee_card_example_large.webp 1200w, assets/coffee_card_example_medium.webp 700w, assets/coffee_card_example_small.webp 340w" sizes="(min-width: 1400px) 358px, (min-width: 1200px) 298px, (min-width: 1000px) 238px, (min-width: 780px) 266px, (min-width: 580px) 410px, calc(100vw - 130px)">
                     <div class="card-body">
                         <h4 class="card-title moonffee-font fw-bold"><u>Cappuccino</u></h4>
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
@@ -125,7 +125,7 @@ include_once 'header.php';
             </div>
             <div class="col hidden">
                 <div class="card m-3">
-                    <img src="assets/coffee_card_example.webp" class="card-img-top" alt="coffee_card_img">
+                    <img src="assets/coffee_card_example_small.webp" class="card-img-top" alt="Coffee beans with coffee cup on the table" srcset="assets/coffee_card_example_large.webp 1200w, assets/coffee_card_example_medium.webp 700w, assets/coffee_card_example_small.webp 340w" sizes="(min-width: 1400px) 358px, (min-width: 1200px) 298px, (min-width: 1000px) 238px, (min-width: 780px) 266px, (min-width: 580px) 410px, calc(100vw - 130px)">
                     <div class="card-body">
                         <h4 class="card-title moonffee-font fw-bold"><u>Espresso</u></h4>
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
@@ -139,7 +139,7 @@ include_once 'header.php';
             </div>
             <div class="col hidden">
                 <div class="card m-3">
-                    <img src="assets/coffee_card_example.webp" class="card-img-top" alt="coffee_card_img">
+                    <img src="assets/coffee_card_example_small.webp" class="card-img-top" alt="Coffee beans with coffee cup on the table" srcset="assets/coffee_card_example_large.webp 1200w, assets/coffee_card_example_medium.webp 700w, assets/coffee_card_example_small.webp 340w" sizes="(min-width: 1400px) 358px, (min-width: 1200px) 298px, (min-width: 1000px) 238px, (min-width: 780px) 266px, (min-width: 580px) 410px, calc(100vw - 130px)">
                     <div class="card-body">
                         <h4 class="card-title moonffee-font fw-bold"><u>Mocha</u></h4>
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
@@ -155,7 +155,7 @@ include_once 'header.php';
     </div>
 </section>
 
-<section id="moonffee-coffee-filler" class="d-flex align-items-center text-center">
+<section id="moonffee_coffee_filler" class="d-flex align-items-center text-center">
     <div class="container p-5">
         <div class="d-flex flex-column text-white hidden">
             <h1 class="moonffee-font fw-bold display-3 hidden">Lorem Ipsum</h1>
@@ -178,11 +178,15 @@ include_once 'header.php';
     </div>
 </section>
 
-<section id="moonffee-story-about">
+<section id="moonffee_story_about">
     <div class="container p-5">
         <div class="row row-cols-1 row-cols-lg-2">
             <div class="col d-flex flex-column my-5 hidden">
-                <img src="assets/coffee_with_heart_drawn_foam.jpg" alt="coffee-with-heart-drawn-foam">
+                <img src="assets/coffee_with_heart_drawn_foam_small.webp" alt="Coffee with heart drawn foam" 
+                     srcset="assets/coffee_with_heart_drawn_foam_large.webp 1200w,
+                             assets/coffee_with_heart_drawn_foam_medium.webp 700w,
+                             assets/coffee_with_heart_drawn_foam_small.webp 340w"
+                     sizes="(min-width: 1400px) 590px, (min-width: 1200px) 500px, (min-width: 1000px) 410px, (min-width: 780px) 614px, (min-width: 580px) 434px, calc(100vw - 106px)">
                 <div class="pe-3 mt-4">
                     <h3 class="moonffee-font fw-bold">Our Story</h3>
                     <p><i>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta, molestiae. Id rerum fugiat ab veritatis sunt vitae assumenda libero harum! Tenetur ullam fugit dolore neque impedit? Explicabo inventore facere, fugit provident ea voluptate distinctio error id tempore dicta ullam et.</i></p>
@@ -190,7 +194,11 @@ include_once 'header.php';
                 </div>
             </div>
             <div class="col d-flex flex-column my-5 hidden">
-                <img src="assets/coffee_with_heart_drawn_foam.jpg" alt="coffee-with-heart-drawn-foam">
+                <img src="assets/coffee_with_heart_drawn_foam_small.webp" alt="Coffee with heart drawn foam" 
+                     srcset="assets/coffee_with_heart_drawn_foam_large.webp 1200w,
+                             assets/coffee_with_heart_drawn_foam_medium.webp 700w,
+                             assets/coffee_with_heart_drawn_foam_small.webp 340w"
+                     sizes="(min-width: 1400px) 590px, (min-width: 1200px) 500px, (min-width: 1000px) 410px, (min-width: 780px) 614px, (min-width: 580px) 434px, calc(100vw - 106px)">
                 <div class="pe-3 mt-4">
                     <h3 class="moonffee-font fw-bold">Our Coffee</h3>
                     <p><i>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta, molestiae. Id rerum fugiat ab veritatis sunt vitae assumenda libero harum! Tenetur ullam fugit dolore neque impedit? Explicabo inventore facere, fugit provident ea voluptate distinctio error id tempore dicta ullam et.</i></p>
@@ -201,36 +209,36 @@ include_once 'header.php';
     </div>
 </section>
 
-<section id="moonffee-coffee-gallery">
+<section id="moonffee_coffee_gallery">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4">
         <div class="col hidden">
-            <img src="assets/coffee_machine_bar.jpg" alt="coffee_gallery_img">
+            <img src="assets/coffee_machine_bar_small.webp" alt="Coffee machine making coffee" srcset="assets/coffee_machine_bar_large.webp 1200w, assets/coffee_machine_bar_medium.webp 700w, assets/coffee_machine_bar_small.webp 340w" sizes="(min-width: 560px) 480px, 90vw">
         </div>
         <div class="col hidden">
-            <img src="assets/close_up_hands_making_coffee.jpg" alt="coffee_gallery_img">
+            <img src="assets/close_up_hands_making_coffee_small.webp" alt="Close up hands making coffee" srcset="assets/close_up_hands_making_coffee_large.webp 1200w, assets/close_up_hands_making_coffee_medium.webp 700w, assets/close_up_hands_making_coffee_small.webp 340w" sizes="(min-width: 560px) 479px, 89.58vw">
         </div>
         <div class="col hidden">
-            <img src="assets/coffee_card_example.webp" alt="coffee_gallery_img">
+            <img src="assets/coffee_card_example_small.webp" alt="Coffee beans with coffee cup on the table" srcset="assets/coffee_card_example_large.webp 1200w, assets/coffee_card_example_medium.webp 700w, assets/coffee_card_example_small.webp 340w" sizes="(min-width: 560px) 480px, 90vw">
         </div>
         <div class="col hidden">
-            <img src="assets/coffee_card_example_2.jpg" alt="coffee_gallery_img">
+            <img src="assets/coffee_card_example_2_small.webp" alt="Coffee beans with coffee cup on the table" srcset="assets/coffee_card_example_2_large.webp 1200w, assets/coffee_card_example_2_medium.webp 700w, assets/coffee_card_example_2_small.webp 340w" sizes="(min-width: 640px) 569px, calc(95.31vw - 22px)">
         </div>
     </div>
 </section>
 
-<section id="moonffee-storing-about">
+<section id="moonffee_storing_about">
     <div class="container p-5">
         <div class="d-flex flex-column justify-content-center align-items-center">
             <div class="text-center">
                 <h1 class="moonffee-font fw-bold display-3 mb-4 hidden">Keeping & Storing</h1>
                 <p class="mx-5 pb-4 hidden"><i>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem maiores earum corporis omnis. Fuga consequatur eos facilis deserunt quo quia voluptas. Cumque amet, inventore error quae et harum illum adipisci laboriosam, dolor pariatur debitis alias sunt! Aperiam nemo animi quia dolorum totam accusantium doloribus aliquam expedita. Explicabo natus voluptatum nemo veniam saepe reprehenderit, qui, consectetur illo enim illum ducimus consequuntur.</i></p>
             </div>
-            <img src="assets/coffee_in_a_bag.webp" alt="storing_coffee" class="hidden">
+            <img src="assets/coffee_beans_in_a_bag_small.webp" class="hidden" alt="Open bag of coffee beans" srcset="assets/coffee_beans_in_a_bag_large.webp 1200w, assets/coffee_beans_in_a_bag_medium.webp 700w, assets/coffee_beans_in_a_bag_small.webp 340w" sizes="(min-width: 1200px) 578px, (min-width: 780px) 547px, (min-width: 620px) 434px, calc(80vw - 46px)">
         </div>
     </div>
 </section>
 
-<section id="moonffee-shop-info">
+<section id="moonffee_shop_info">
     <div class="container p-5">
         <div class="d-flex flex-column flex-md-row text-white justify-content-center align-items-center">
             <div class="moonffee-work-time text-center fw-bold p-5 fs-5 hidden">

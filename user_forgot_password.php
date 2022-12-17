@@ -2,7 +2,7 @@
 include_once 'head.php';
 ?>
 
-<section id="userForgotPwd">
+<section id="user_forgot_password_page">
     <div class="container py-5">
         <?php
         if (isset($_GET["error"])) {
@@ -27,15 +27,15 @@ include_once 'head.php';
             }
         }
         ?>
-        <div class="password-reset mx-auto p-4 hidden">
-            <h1 class="moonffee fw-bold text-center">Password reset</h1>
+        <div class="user-input-card mx-auto p-4 hidden">
+            <h1 class="moonffee-font fw-bold text-center">Password reset</h1>
             <hr>
             <p class="fw-bold text-center mb-3">In order to reset your password, we need you to provide us an email of your account</p>
             <hr class="m-0 mt-1 mb-3">
             <form action="includes/user_email_auth.inc.php" id="password-reset-form" method="POST">
                 <div class="mb-3">
-                    <label for="userForgotPwdEmail" class="form-label fw-bold ms-1">Your email:</label>
-                    <input id="verCodeInput" type="email" name="userForgotPwdEmail" placeholder="example@gmail.com" class="form-control" id="password-reset-email" aria-describedby="password-reset-email" required>
+                    <label for="user_forgot_password_email" class="form-label fw-bold ms-1">Your email:</label>
+                    <input id="verCodeInput" type="email" name="user_forgot_password_email" placeholder="example@gmail.com" class="form-control" id="password-reset-email" aria-describedby="password-reset-email" required>
                     <?php
                     if (isset($_GET["error"])) {
                         if ($_GET["error"] == "codeExpired") {

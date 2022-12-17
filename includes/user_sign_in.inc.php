@@ -32,7 +32,7 @@ if (isset($_POST["submitSignIn"])) {
     if (mysqli_num_rows($userImageResult) > 0) {
         while ($row = mysqli_fetch_assoc($userImageResult)) {
             $userID = $row['userID'];
-            $sqlUserImageStatus = "INSERT INTO users_upload (userID, uploadstatus, userUploadImageData) VALUES ('$userID', 0, 'default')";
+            $sqlUserImageStatus = "INSERT INTO users_upload (userID, userUploadStatus, userUploadImageData) VALUES ('$userID', 0, 'default')";
             mysqli_query($conn, $sqlUserImageStatus);
         }
     } 

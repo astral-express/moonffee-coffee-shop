@@ -75,7 +75,7 @@ body {
   overflow: hidden;
   position: relative;
   background: linear-gradient(rgba(248, 223, 197), rgba(0, 0, 0, 0.6)),
-    url(../assets/hero.jpg) center top no-repeat;
+    url(../assets/hero.webp) center top no-repeat;
 }
 
 .hero-box {
@@ -90,58 +90,58 @@ body {
   }
 }
 
-#moonffee-short-about {
+#moonffee_short_about {
   padding: 0 28em;
   @media (max-width: 1024px) {
     padding: 0 0;
   }
 }
 
-#moonffee-coffee-categories,
-#moonffee-coffee-filler {
-  background-image: url("../assets/categories_background.jpg");
+#moonffee_coffee_categories,
+#moonffee_coffee_filler {
+  background-image: url("../assets/categories_background.webp");
   background-position: center;
   background-size: cover;
 }
 
-#moonffee-coffee-filler {
-  background-image: url("../assets/filler_background.jpg");
+#moonffee_coffee_filler {
+  background-image: url("../assets/filler_background.webp");
   height: 90vh;
   background-repeat: no-repeat;
 }
 
-#moonffee-coffee-types {
+#moonffee_coffee_types {
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.1);
   background-color: colors.$desert-sand;
 }
 
-#moonffee-story-about img,
-#moonffee-storing-about img,
+#moonffee_story_about img,
+#moonffee_storing_about img,
 .hero-box,
-.moonffee-shop-items {
+.moonffee_shop_items {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
 }
 
-.moonffee-shop-items {
+.moonffee_shop_items {
   border: 1px solid colors.$bisque-fade;
   img {
     max-width: 6em;
   }
 }
 
-#moonffee-story-about img {
+#moonffee_story_about img {
   border-radius: 1em;
   border: 5px solid colors.$seashell;
 }
 
-#moonffee-coffee-gallery {
+#moonffee_coffee_gallery {
   overflow: hidden;
   img {
     max-height: 320px;
   }
 }
 
-#moonffee-storing-about img {
+#moonffee_storing_about img {
   border-radius: 1em;
   border: 5px solid colors.$seashell;
   max-width: 800px;
@@ -150,8 +150,8 @@ body {
   }
 }
 
-#moonffee-shop-info {
-  background-image: url("../assets/coffee_beans_dark_background.jpg");
+#moonffee_shop_info {
+  background-image: url("../assets/coffee_beans_dark_background.webp");
   height: 45vh;
   background-position: center;
   background-size: cover;
@@ -160,7 +160,7 @@ body {
   }
 }
 
-#moonffee-shop-info {
+#moonffee_shop_info {
   .moonffee-services {
     background-color: colors.$pale-taupe;
     border-radius: 1em;
@@ -188,24 +188,20 @@ body {
 
 #new_user_notification,
 #user_code_verification,
-#moonffee-story-about,
-#moonffee-storing-about,
-#moonffee-short-about {
+#moonffee_story_about,
+#moonffee_storing_about,
+#moonffee_short_about {
   background-color: colors.$bisque;
 }
 
 .user-input-card,
-.email-verification,
-.password-reset,
 .map-outer-text-info {
-    background-color: colors.$seashell;
+  background-color: colors.$seashell;
 }
 
 #new_user_notification,
 #user_code_verification,
-.user-input-card,
-.email-verification,
-.password-reset {
+.user-input-card {
   max-width: 25em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
   border: 1px solid colors.$charleston-fade;
@@ -221,14 +217,14 @@ body {
   margin-bottom: -1em !important;
 }
 
-#userSignIn-page,
-#userLogin-page,
-#userProfile,
+#user_sign_in_page,
+#user_login_page,
+#user_profile,
 #errAccessDenied,
-#userEmailVerification,
-#userForgotPwd,
-#userPasswordReset,
-#moonffee-contact-info {
+#user_email_verification_page,
+#user_forgot_password_page,
+#user_reset_password_page,
+#moonffee_contact_info {
   height: 100%;
   background-position: center;
   background-size: cover;
@@ -239,26 +235,26 @@ body {
   min-height: 100vh;
 }
 
-#userSignIn-page,
-#userLogin-page,
+#user_sign_in_page,
+#user_login_page,
 #errAccessDenied,
-#userForgotPwd,
-#userPasswordReset {
-  background-image: url("../assets/background_2.jpg");
+#user_forgot_password_page,
+#user_reset_password_page {
+  background-image: url("../assets/background_2.webp");
 }
 
-#userProfile,
-#userEmailVerification {
-  background-image: url("../assets/background_3.jpg");
+#user_profile,
+#user_email_verification_page {
+  background-image: url("../assets/background_3.webp");
 }
 
-#moonffee-contact-info {
-  background-image: url("../assets/background_1.jpg");
+#moonffee_contact_info {
+  background-image: url("../assets/background_1.webp");
 }
 
-#moonffee-coffee-categories,
-#moonffee-coffee-filler,
-#moonffee-shop-info {
+#moonffee_coffee_categories,
+#moonffee_coffee_filler,
+#moonffee_shop_info {
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
 }
 
@@ -276,14 +272,11 @@ body {
   font-size: 1em;
 }
 
-#user_code_verification,
-#userProfile .card,
-.email-verification,
-.password-reset {
+#user_profile .card {
   max-width: 22em;
 }
 
-#userProfile .card,
+#user_profile .card,
 .list-group-item,
 .user-welcome-title,
 .card-body {
@@ -335,7 +328,7 @@ body {
 }
 
 .user-container,
-.moonffee-shop-items {
+.moonffee_shop_items {
   background-color: colors.$charleston-fade;
 }
 

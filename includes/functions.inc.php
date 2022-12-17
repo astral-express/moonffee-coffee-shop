@@ -76,7 +76,7 @@ function emailVerificationChk($conn, $userID)
 
 // function explodeImgFileExt($userID, $userName, $userImageData)
 // {
-//     $imgFilePath = '../uploads/' . $userID . '_' . $userName . '_' . 'userProfileImage' . $userImageData . '.' . '*';
+//     $imgFilePath = '../uploads/' . $userID . '_' . $userName . '_' . 'user_profileImage' . $userImageData . '.' . '*';
 //     $imgFileInfo = glob($imgFilePath);
 //     $imgFileExt = explode(".", $imgFileInfo[0]);
 //     $imgFileActualExt = end($imgFileExt);

@@ -5,7 +5,7 @@ include_once 'includes/user_profile.inc.php';
 ?>
 
 
-<section id="userProfile">
+<section id="user_profile">
     <div class="container py-5">
         <?php
         if (isset($_GET["error"])) {

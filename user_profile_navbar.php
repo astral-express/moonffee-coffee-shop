@@ -5,7 +5,7 @@
     <div class="collapse navbar-collapse" id="sidebarSupportedContent">
         <div class="list-group">
             <a href="user_profile_edit_info.php" class="profile-navbar-link list-group-item list-group-item-action"><i class="fa-solid fa-user me-3"></i><span>Edit info</span></a>
-            <!-- <a href="userProfileEdit__History.php" class="profile-navbar-link list-group-item list-group-item-action"><i class="fa-solid fa-cart-shopping me-3"></i><span>Purchase history</span></a> -->
+            <!-- <a href="user_profileEdit__History.php" class="profile-navbar-link list-group-item list-group-item-action"><i class="fa-solid fa-cart-shopping me-3"></i><span>Purchase history</span></a> -->
             <a href="user_profile_edit_password.php" class="profile-navbar-link list-group-item list-group-item-action"><i class="fa-solid fa-key me-3"></i><span>Change Password</span></a>
             <a href="user_delete_profile.php" class="profile-navbar-link list-group-item list-group-item-action "><i class="fa-solid fa-trash me-3"></i><span>Delete Profile</span></a>
         </div>

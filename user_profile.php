@@ -4,7 +4,7 @@ include_once 'header.php';
 include_once 'includes/user_profile.inc.php';
 ?>
 
-<section id="userProfile">
+<section id="user_profile">
     <div class="container py-4">
         <div class="user-welcome-title text-center mx-auto px-3 hidden">
             <?php
@@ -33,7 +33,7 @@ include_once 'includes/user_profile.inc.php';
         ?>
         <div id="user-card" class="card mx-auto my-5 hidden">
             <?php
-            if ($userImageData === 'default') {
+            if ($userImageData === 'default' || $userImageData === null) {
                 echo
                 "<div class='user-container'>
                     <img src='uploads/default_user_avatar.jpg' class='user-avatar' alt='user_Default_Profile_Image'>
@@ -81,7 +81,7 @@ include_once 'includes/user_profile.inc.php';
                 } else if ($_GET["error"] == "invalidFileType") {
                     echo
                     "<div id='updated' class='user-update-notification-image bg-danger text-center px-3 hidden'>
-                        <p class='fw-bold text-white m-0 my-2'>Invalid image type, please upload an image of type: .jpg,  jpeg, png, .gif!</p>
+                        <p class='fw-bold text-white m-0 my-2'>Invalid image type, please upload an image of type: .webp,  jpeg, png, .gif!</p>
                     </div>";
                 } else if ($_GET["error"] == "fileSizeExceeded") {
                     echo

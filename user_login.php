@@ -1,20 +1,20 @@
 <?php
 include_once 'head.php';
 ?>
-<section id="userLogin-page">
+<section id="user_login_page">
     <div class="container p-5">
         <?php
         if (isset($_GET["success"])) {
             if ($_GET["success"] == "newUser") {
                 echo
                 "<div id='new_user_notification' class='mx-auto bg-success text-center m-0 hidden'>
-                    <h1 class='moonffee fw-bold text-white mt-3'>Welcome</h1>    
+                    <h2 class='moonffee-font fw-bold text-white mt-3'>Welcome</h2>
                     <h5 class='fw-bold text-white pb-4 m-3'>You have successfully made an account, please enter your info of your new account to login!</h5>
                 </div>";
             } else if ($_GET["success"] == "pwdUpdated") {
                 echo
                 "<div id='new_user_notification' class='mx-auto bg-success text-center m-0 hidden'>
-                <h1 class='moonffee fw-bold text-white mt-3'>Password changed</h1>    
+                    <h2 class='moonffee fw-bold text-white mt-3'>Password changed</h2>
                     <h5 class='fw-bold text-white pb-4 m-3'>You can now login into your account with the new password!</h5>
                 </div>";
             }
@@ -23,19 +23,19 @@ include_once 'head.php';
             if ($_GET["error"] == "invalidToken") {
                 echo
                 "<div id='new_user_notification' class='mx-auto bg-danger text-center m-0 hidden'>
-                    <h1 class='moonffee fw-bold text-white mt-3'>Link expired</h1>
+                    <h2 class='moonffee-font fw-bold text-white mt-3'>Link expired</h2>
                     <h5 class='fw-bold text-white pb-4 m-3'>Link you've opened to change password has expired, please click on Forgot password link if you wish to change your password</h5>
                 </div>";
             }
         }
         ?>
         <div class="user-input-card mx-auto hidden">
-            <h2 class="moonffee fw-bold text-center">Login</h2>
+            <h2 class="moonffee-font fw-bold text-center">Login</h2>
             <hr>
             <?php
             if (isset($_GET["success"])) {
                 if ($_GET["success"] == "newUser") echo "<p class='moonffee fs-6 fw-bold text-center'>Welcome newcomer, we're happy to see you!</p>";
-            } else echo "<p class='moonffee fs-6 fw-bold text-center'>Welcome back, we're happy to see you!</p>";
+            } else echo "<p class='moonffee-font fs-6 fw-bold text-center'>Welcome back, we're happy to see you!</p>";
             ?>
             <form action="includes/user_login.inc.php" method="post" class="d-flex flex-column justify-content-between p-2">
                 <div class="mb-1">

@@ -2,7 +2,7 @@
 include_once 'head.php';
 ?>
 
-<section id="userProfile">
+<section id="user_profile">
     <div class="container py-5">
         <div id="profile-deleted" class="card mx-auto p-4 hidden">
             <h1 class="moonffee fw-bold text-center">Farewell..</h1>

@@ -22,7 +22,7 @@
         <!-- Footer logo -->
         <div class="footer-logo text-dark py-3 fs-4 hidden">
             <a id="moonffee" class="navbar-brand" href="index.php">
-                <img src="/assets/moonffee_logo.png" alt="Logo" width="40" class="d-inline-block mb-2 me-1">
+                <img src="/assets/moonffee_logo.webp" alt="Logo" width="40" class="d-inline-block mb-2 me-1">
                 <span class="fw-bold moonffee-font">Moonffee</span>
             </a>
         </div>

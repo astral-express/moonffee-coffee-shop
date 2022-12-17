@@ -3,7 +3,7 @@ include_once 'head.php';
 include_once 'includes/user_profile.inc.php';
 ?>
 
-<section id="userEmailVerification">
+<section id="user_email_verification_page">
     <div class="container py-5">
         <?php
         if (isset($_GET["error"])) {
@@ -29,8 +29,8 @@ include_once 'includes/user_profile.inc.php';
             }
         }
         ?>
-        <div class="email-verification mx-auto p-4 hidden">
-            <h1 class="moonffee fw-bold text-center">Email verification</h1>
+        <div class="user-input-card mx-auto p-4 hidden">
+            <h1 class="moonffee-font fw-bold text-center">Email verification</h1>
             <hr>
             <p class="fw-bold text-center mb-3">In order to finish creating your account and have full access to our services, you need to verify your email</p>
             <form action="includes/user_email_auth.inc.php" id="email-verification-form" class="d-flex flex-column" method="POST">
@@ -45,7 +45,7 @@ include_once 'includes/user_profile.inc.php';
                 <p class="form-text text-dark ms-1 mt-2 text-center"><strong>Attention:</strong> Verification code will expire in <br>5 minutes once it's sent!</p>
             </form>
             <hr class="m-0 mt-1 mb-3">
-            <form action="includes/user_email_verification_check.inc.php" id="email-verification-form" method="POST">
+            <form action="includes/user_email_verification.inc.php" id="email-verification-form" method="POST">
                 <div class="mb-3">
                     <label for="userVerificationCode" class="form-label fw-bold ms-1">Your verification code:</label>
                     <input id="verCodeInput" type="text" name="userInputVerCode" placeholder="Verification code" class="form-control" id="verificationCode" aria-describedby="verificationCode" required>

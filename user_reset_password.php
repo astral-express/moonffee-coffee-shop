@@ -2,17 +2,17 @@
 include_once 'head.php';
 $serverURI = $_SERVER["REQUEST_URI"];
 $url = parse_url($serverURI);
-if (!parse_str($url['query'], $params)) {
-    $urlStr = parse_str($url['query'], $params);
-    $linkToken = $params['token'];
-    setcookie("linkToken", "$linkToken", time() + 300);
-}
+parse_str($url['query'], $params);
+if (array_key_exists('token', $params) === true) {
+    $token = $params['token'];
+    setcookie("linkToken", "$token", time() + 300);
+};
 ?>
 
-<section id="userPasswordReset">
+<section id="user_reset_password_page">
     <div class="container py-5">
-        <div id="user-reset-password" class="card mx-auto p-4 hidden">
-            <h4 class="card-title text-center mt-3 m-0">
+        <div class="user-input-card mx-auto p-4 hidden">
+            <h4 class="moonffee-font card-title text-center mt-3 m-0">
                 <strong>Change your password</strong>
             </h4>
             <hr class="m-2">
@@ -28,7 +28,7 @@ if (!parse_str($url['query'], $params)) {
                 <?php
                 if (isset($_GET["error"])) {
                     if ($_GET["error"] == "newPwdMatch") {
-                        echo "<p class='fw-bold text-danger text-center mb-3'>Passwords don't match, please try again!</p>";
+                        echo "<p class='fw-bold text-danger text-center mb-3'>Passwords doesn't match, please try again!</p>";
                     } else if ($_GET["error"] == "pwdValidate") {
                         echo "<p class='fw-bold text-danger text-center mb-3'>Password should be at least 8 characters, include at least one upper case letter, one number, and one special character.</p>";
                     }

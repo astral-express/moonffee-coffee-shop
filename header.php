@@ -5,7 +5,7 @@
             <div class="container">
                 <!-- Logo -->
                 <a id="moonffee-logo" class="navbar-brand mt-1" href="index.php">
-                    <img src="/assets/moonffee_logo.png" alt="Logo" width="40" class="d-inline-block mb-2">
+                    <img src="assets/moonffee_logo.webp" alt="Logo" width="40" class="d-inline-block mb-2">
                     Moonffee
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,7 +39,7 @@
                         <?php
                             if (isset($_SESSION["userName"])) {
                                 echo "<li class='nav-item'>";
-                                if ($userImageData === 'default') {
+                                if ($userImageData === 'default' || $userImageData === null) {
                                     echo "<img src='uploads/default_user_avatar.jpg' class='nav-user-avatar' alt='user_Default_Profile_Image'>";
                                 } 
                                 else { 

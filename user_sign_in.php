@@ -1,12 +1,12 @@
 <?php
 include_once 'head.php';
 ?>
-<section id="userSignIn-page">
+<section id="user_sign_in_page">
     <div class="container p-5">
         <div class="user-input-card mx-auto hidden">
-            <h2 class="moonffee fw-bold text-center">Sign In</h2>
+            <h2 class="moonffee-font fw-bold text-center">Sign In</h2>
             <hr>
-            <p class="moonffee fs-6 fw-bold text-center">Sign In for better customer experience!</p>
+            <p class="moonffee-font fs-6 fw-bold text-center">Sign In for better customer experience!</p>
             <form action="includes/user_sign_in.inc.php" id="show_hide_password_form" method="POST">
                 <div class="mb-3">
                     <label for="userInputFirstName" class="form-label fw-bold ms-1">First name:</label>

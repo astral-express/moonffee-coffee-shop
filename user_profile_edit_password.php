@@ -4,7 +4,7 @@ include_once 'header.php';
 include_once 'includes/user_profile.inc.php';
 ?>
 
-<section id="userProfile">
+<section id="user_profile">
     <div class="container py-5">
         <div id="profile-settingsTab" class="card mx-auto p-4 hidden">
             <?php include_once 'user_profile_navbar.php'; ?>
