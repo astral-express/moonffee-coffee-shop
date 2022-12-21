@@ -14,6 +14,12 @@
 #moonffee_coffee_filler h4.hidden,
 #moonffee_coffee_filler div.hidden,
 #moonffee_shop_info div.hidden,
+#moonffee_shop_coffee_background h1.hidden,
+#moonffee_shop_coffee_background h4.hidden,
+#moonffee_shop_pastries_background h1.hidden,
+#moonffee_shop_pastries_background h4.hidden,
+#moonffee_shop_cookies_background h1.hidden,
+#moonffee_shop_cookies_background h4.hidden,
 .user-welcome-title.hidden,
 .hero-box.hidden {
   transform: translateX(-10%);
@@ -23,7 +29,11 @@
 #moonffee_coffee_categories div:nth-child(4).hidden,
 #moonffee_storing_about h1.hidden,
 #moonffee_storing_about p.hidden,
-#moonffee_storing_about img.hidden {
+#moonffee_storing_about img.hidden,
+#moonffee_shop_bread_background h1.hidden,
+#moonffee_shop_bread_background h4.hidden,
+#moonffee_shop_cakes_background h1.hidden,
+#moonffee_shop_cakes_background h4.hidden {
   transform: translateX(10%);
 }
 
@@ -37,6 +47,16 @@
 #moonffee_storing_about p.show,
 #moonffee_storing_about img.show,
 #moonffee_shop_info div.show,
+#moonffee_shop_coffee_background h1.show,
+#moonffee_shop_coffee_background h4.show,
+#moonffee_shop_bread_background h1.show,
+#moonffee_shop_bread_background h4.show,
+#moonffee_shop_cakes_background h1.show,
+#moonffee_shop_cakes_background h4.show,
+#moonffee_shop_pastries_background h1.show,
+#moonffee_shop_pastries_background h4.show,
+#moonffee_shop_cookies_background h1.show,
+#moonffee_shop_cookies_background h4.show,
 .user-welcome-title.show,
 .hero-box.show {
   transform: translateX(0);
@@ -55,6 +75,14 @@
 #moonffee_coffee_types h4.hidden,
 #moonffee_story_about div.col.hidden,
 #moonffee_coffee_gallery div.col.hidden,
+#moonffee_shop_hero h4.hidden,
+#shop_item_categories div.col.hidden,
+#moonffee_shop_coffee div.col.hidden,
+#moonffee_shop_bread div.col.hidden,
+#moonffee_shop_pastries div.col.hidden,
+#moonffee_shop_cakes div.col.hidden,
+#moonffee_shop_cookies
+ div.col.hidden,
 .footer-links.hidden,
 .profile-page-container.hidden,
 .copyright.hidden .footer-logo.hidden {
@@ -69,6 +97,13 @@
 #moonffee_coffee_types div.col.show,
 #moonffee_story_about div.col.show,
 #moonffee_coffee_gallery div.col.hidden,
+#moonffee_shop_hero h4.show,
+#shop_item_categories div.col.show,
+#moonffee_shop_coffee div.col.show,
+#moonffee_shop_bread div.col.show,
+#moonffee_shop_pastries div.col.show,
+#moonffee_shop_cakes div.col.show,
+#moonffee_shop_cookies div.col.show,
 .footer-links.show,
 .profile-page-container.show,
 .copyright.show,
@@ -86,17 +121,32 @@
 #moonffee_coffee_types div:nth-child(2).col.hidden,
 #moonffee_coffee_types div:nth-child(5).col.hidden,
 #moonffee_coffee_gallery div:nth-child(2).col.hidden,
+#shop_item_categories div:nth-child(2).col.hidden,
+#moonffee_shop_coffee div:nth-child(2n).col.hidden,
+#moonffee_shop_bread div:nth-child(2).col.hidden,
+#moonffee_shop_pastries div:nth-child(2n).col.hidden,
+#moonffee_shop_cakes div:nth-child(2).col.hidden,
+#moonffee_shop_cookies div:nth-child(2).col.hidden,
 .hero-box.hidden {
   transition-delay: 200ms;
 }
 
 #moonffee_coffee_types div:nth-child(3).col.hidden,
 #moonffee_coffee_types div:nth-child(6).col.hidden,
-#moonffee_coffee_gallery div:nth-child(3).col.hidden {
+#moonffee_coffee_gallery div:nth-child(3).col.hidden,
+#shop_item_categories div:nth-child(3).col.hidden,
+#moonffee_shop_coffee div:nth-child(3n).col.hidden,
+#moonffee_shop_bread div:nth-child(3).col.hidden,
+#moonffee_shop_pastries div:nth-child(3n).col.hidden,
+#moonffee_shop_cakes div:nth-child(3).col.hidden,
+#moonffee_shop_cookies div:nth-child(3).col.hidden   {
   transition-delay: 400ms;
 }
 
-#moonffee_coffee_gallery div:nth-child(4).col.hidden {
+#moonffee_coffee_gallery div:nth-child(4).col.hidden,
+#shop_item_categories div:nth-child(4).col.hidden,
+#moonffee_shop_bread div:nth-child(4).col.hidden,
+#moonffee_shop_cakes div:nth-child(4).col.hidden {
   transition-delay: 600ms;
 }
 

@@ -32,15 +32,15 @@ include_once 'header.php';
                     <img src="assets/bread_icon.webp" alt="Bread icon">
                     <h3 class="moonffee-font fw-bold mt-3">Bread</h3>
                     <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, laborum.</p>
-                    <a href="#" class="moonffee-font text-white fs-5">Learn more</a>
+                    <a href="/shop.php#moonffee_shop_bread" class="moonffee-font text-white fs-5">Learn more</a>
                 </div>
             </div>
             <div class="col hidden">
                 <div class="moonffee_shop_items text-white m-3 p-4">
                     <img src="assets/pastries_icon.webp" alt="Pastries icon">
-                    <h3 class="moonffee-font fw-bold mt-3">Pasteries</h3>
+                    <h3 class="moonffee-font fw-bold mt-3">Pastries</h3>
                     <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, laborum.</p>
-                    <a href="#" class="moonffee-font text-white fs-5">Learn more</a>
+                    <a href="/shop.php#moonffee_shop_pastries" class="moonffee-font text-white fs-5">Learn more</a>
                 </div>
             </div>
             <div class="col hidden">
@@ -48,7 +48,7 @@ include_once 'header.php';
                     <img src="assets/cake_icon.webp" alt="Cake icon">
                     <h3 class="moonffee-font fw-bold mt-3">Cakes</h3>
                     <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, laborum.</p>
-                    <a href="#" class="moonffee-font text-white fs-5">Learn more</a>
+                    <a href="/shop.php#moonffee_shop_cakes" class="moonffee-font text-white fs-5">Learn more</a>
                 </div>
             </div>
             <div class="col hidden">
@@ -56,7 +56,7 @@ include_once 'header.php';
                     <img src="assets/cookie_icon.webp" alt="Cookie icon">
                     <h3 class="moonffee-font fw-bold mt-3 ">Cookies</h3>
                     <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, laborum.</p>
-                    <a href="#" class="moonffee-font text-white fs-5">Learn more</a>
+                    <a href="/shop.php#moonffee_shop_cookies" class="moonffee-font text-white fs-5">Learn more</a>
                 </div>
             </div>
         </div>
@@ -76,7 +76,7 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€3.25<span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <button class="btn btn-dark rounded-pill border border-white ms-auto">Order</button>
+                            <a href="/shop.php#moonffee_shop_coffee" class="btn btn-dark rounded-pill border border-white ms-auto">Order</a>
                         </div>
                     </div>
                 </div>
@@ -90,7 +90,7 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€5.00<span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <button class="btn btn-dark rounded-pill border border-white ms-auto">Order</button>
+                            <a href="/shop.php#moonffee_shop_coffee" class="btn btn-dark rounded-pill border border-white ms-auto">Order</a>
                         </div>
                     </div>
                 </div>
@@ -104,7 +104,7 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€7.45<span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <button class="btn btn-dark rounded-pill border border-white ms-auto">Order</button>
+                            <a href="/shop.php#moonffee_shop_coffee" class="btn btn-dark rounded-pill border border-white ms-auto">Order</a>
                         </div>
                     </div>
                 </div>
@@ -118,7 +118,7 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€2.85<span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <button class="btn btn-dark rounded-pill border border-white ms-auto">Order</button>
+                            <a href="/shop.php#moonffee_shop_coffee" class="btn btn-dark rounded-pill border border-white ms-auto">Order</a>
                         </div>
                     </div>
                 </div>
@@ -132,7 +132,7 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€4.45<span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <button class="btn btn-dark rounded-pill border border-white ms-auto">Order</button>
+                            <a href="/shop.php#moonffee_shop_coffee" class="btn btn-dark rounded-pill border border-white ms-auto">Order</a>
                         </div>
                     </div>
                 </div>
@@ -146,7 +146,7 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€10.15<span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <button class="btn btn-dark rounded-pill border border-white ms-auto">Order</button>
+                            <a href="/shop.php#moonffee_shop_coffee" class="btn btn-dark rounded-pill border border-white ms-auto">Order</a>
                         </div>
                     </div>
                 </div>
@@ -162,16 +162,16 @@ include_once 'header.php';
             <h4 class="my-5"><i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quibusdam nam quidem qui ipsam laudantium totam accusamus laboriosam sit dignissimos.</i></h4>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 hidden">
                 <div class="col">
-                    <a href="#" class="btn btn-dark rounded-pill border border-white fw-bold p-3 px-4 my-3">COFFEES</a>
+                    <a href="shop.php" class="btn btn-dark rounded-pill border border-white fw-bold p-3 px-4 my-3">COFFEES</a>
                 </div>
                 <div class="col">
-                    <a href="#" class="btn btn-dark rounded-pill border border-white fw-bold p-3 px-4 my-3">BAKERY</a>
+                    <a href="shop.php" class="btn btn-dark rounded-pill border border-white fw-bold p-3 px-4 my-3">BAKERY</a>
                 </div>
                 <div class="col">
-                    <a href="#" class="btn btn-dark rounded-pill border border-white fw-bold p-3 px-4 my-3">CAFE</a>
+                    <a href="shop.php" class="btn btn-dark rounded-pill border border-white fw-bold p-3 px-4 my-3">CAFE</a>
                 </div>
                 <div class="col">
-                    <a href="#" class="btn btn-dark rounded-pill border border-white fw-bold p-3 px-4 my-3">CATERING</a>
+                    <a href="shop.php" class="btn btn-dark rounded-pill border border-white fw-bold p-3 px-4 my-3">CATERING</a>
                 </div>
             </div>
         </div>
@@ -187,7 +187,7 @@ include_once 'header.php';
                              assets/coffee_with_heart_drawn_foam_medium.webp 700w,
                              assets/coffee_with_heart_drawn_foam_small.webp 340w"
                      sizes="(min-width: 1400px) 590px, (min-width: 1200px) 500px, (min-width: 1000px) 410px, (min-width: 780px) 614px, (min-width: 580px) 434px, calc(100vw - 106px)">
-                <div class="pe-3 mt-4">
+                <div class="mt-4 ps-1 text-center text-md-start">
                     <h3 class="moonffee-font fw-bold">Our Story</h3>
                     <p><i>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta, molestiae. Id rerum fugiat ab veritatis sunt vitae assumenda libero harum! Tenetur ullam fugit dolore neque impedit? Explicabo inventore facere, fugit provident ea voluptate distinctio error id tempore dicta ullam et.</i></p>
                     <a href="#" class="btn btn-dark rounded-pill border border-white fw-bold p-2 px-4">Learn more</a>
@@ -199,7 +199,7 @@ include_once 'header.php';
                              assets/coffee_with_heart_drawn_foam_medium.webp 700w,
                              assets/coffee_with_heart_drawn_foam_small.webp 340w"
                      sizes="(min-width: 1400px) 590px, (min-width: 1200px) 500px, (min-width: 1000px) 410px, (min-width: 780px) 614px, (min-width: 580px) 434px, calc(100vw - 106px)">
-                <div class="pe-3 mt-4">
+                <div class="ps-1 mt-4 text-center text-md-start">
                     <h3 class="moonffee-font fw-bold">Our Coffee</h3>
                     <p><i>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta, molestiae. Id rerum fugiat ab veritatis sunt vitae assumenda libero harum! Tenetur ullam fugit dolore neque impedit? Explicabo inventore facere, fugit provident ea voluptate distinctio error id tempore dicta ullam et.</i></p>
                     <a href="#" class="btn btn-dark rounded-pill border border-white fw-bold p-2 px-4">Learn more</a>
@@ -212,16 +212,16 @@ include_once 'header.php';
 <section id="moonffee_coffee_gallery">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4">
         <div class="col hidden">
-            <img src="assets/coffee_machine_bar_small.webp" alt="Coffee machine making coffee" srcset="assets/coffee_machine_bar_large.webp 1200w, assets/coffee_machine_bar_medium.webp 700w, assets/coffee_machine_bar_small.webp 340w" sizes="(min-width: 560px) 480px, 90vw">
+            <img src="assets/coffee_machine_bar_small.webp" alt="Coffee machine making coffee" srcset="assets/coffee_machine_bar_large.webp 1200w, assets/coffee_machine_bar_medium.webp 700w, assets/coffee_machine_bar_small.webp 340w" sizes="(max-width: 580px) 426px, 90vw">
         </div>
         <div class="col hidden">
-            <img src="assets/close_up_hands_making_coffee_small.webp" alt="Close up hands making coffee" srcset="assets/close_up_hands_making_coffee_large.webp 1200w, assets/close_up_hands_making_coffee_medium.webp 700w, assets/close_up_hands_making_coffee_small.webp 340w" sizes="(min-width: 560px) 479px, 89.58vw">
+            <img src="assets/close_up_hands_making_coffee_small.webp" alt="Close up hands making coffee" srcset="assets/close_up_hands_making_coffee_large.webp 1200w, assets/close_up_hands_making_coffee_medium.webp 700w, assets/close_up_hands_making_coffee_small.webp 340w" sizes="(max-width: 580px) 426px, 90vw">
         </div>
         <div class="col hidden">
-            <img src="assets/coffee_card_example_small.webp" alt="Coffee beans with coffee cup on the table" srcset="assets/coffee_card_example_large.webp 1200w, assets/coffee_card_example_medium.webp 700w, assets/coffee_card_example_small.webp 340w" sizes="(min-width: 560px) 480px, 90vw">
+            <img src="assets/coffee_card_example_small.webp" alt="Coffee beans with coffee cup on the table" srcset="assets/coffee_card_example_large.webp 1200w, assets/coffee_card_example_medium.webp 700w, assets/coffee_card_example_small.webp 340w" sizes="(max-width: 580px) 426px, 90vw">
         </div>
         <div class="col hidden">
-            <img src="assets/coffee_card_example_2_small.webp" alt="Coffee beans with coffee cup on the table" srcset="assets/coffee_card_example_2_large.webp 1200w, assets/coffee_card_example_2_medium.webp 700w, assets/coffee_card_example_2_small.webp 340w" sizes="(min-width: 640px) 569px, calc(95.31vw - 22px)">
+            <img src="assets/coffee_card_example_2_small.webp" alt="Coffee beans with coffee cup on the table" srcset="assets/coffee_card_example_2_large.webp 1200w, assets/coffee_card_example_2_medium.webp 700w, assets/coffee_card_example_2_small.webp 340w" sizes="(max-width: 580px) 426px, 90vw)">
         </div>
     </div>
 </section>
@@ -261,6 +261,11 @@ include_once 'header.php';
         </div>
     </div>
 </section>
+
+<button type="button" class="btn btn-dark btn-floating btn-lg" id="back_to_top_btn">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
 <?php
 include_once 'footer.php';
 ?>
