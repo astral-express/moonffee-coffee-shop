@@ -6,7 +6,7 @@ include_once 'header.php';
 <section id="user_cart_hero">
     <div id="user_cart_shop_background" class="d-flex flex-column justify-content-center align-items-center p-5">
         <h1 class="moonffee-font fw-bold display-3 text-center my-3 text-white hidden">Your cart shop</h1>
-        <h4 class="moonffee-font text-center mt-3 mb-5 text-white hidden">Here are items you've added to your cart shop!</h4>
+        <h4 class="moonffee-font text-center mt-3 mb-5 text-white hidden">Here are products you've added to your cart!</h4>
     </div>
 </section>
 
