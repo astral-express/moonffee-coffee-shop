@@ -21,7 +21,7 @@ include_once 'header.php';
     <div class="container p-5">
         <div class="text-center">
             <h1 class="moonffee-font fw-bold display-3 hidden">The family-owned coffee shop</h1>
-            <p class="text-secondary fs-5 my-4 v hidden"><i>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate velit ipsum, illum quod maiores minima numquam alias quo natus quia voluptates voluptatum omnis non perspiciatis sint delectus iure officia impedit ipsa architecto repellendus eaque consequuntur quaerat. Fugit iusto ratione eligendi?</i></p>
+            <p class="fs-5 my-4 hidden"><i>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate velit ipsum, illum quod maiores minima numquam alias quo natus quia voluptates voluptatum omnis non perspiciatis sint delectus iure officia impedit ipsa architecto repellendus eaque consequuntur quaerat. Fugit iusto ratione eligendi?</i></p>
             <a href="#" class="btn btn-dark rounded-pill border border-white fw-bold p-3 px-4 my-3 mt-3" role="button">OUR VALUES</a>
         </div>
     </div>
@@ -234,7 +234,7 @@ include_once 'header.php';
         <div class="d-flex flex-column justify-content-center align-items-center">
             <div class="text-center">
                 <h1 class="moonffee-font fw-bold display-3 mb-4 hidden">Keeping & Storing</h1>
-                <p class="mx-5 pb-4 hidden"><i>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem maiores earum corporis omnis. Fuga consequatur eos facilis deserunt quo quia voluptas. Cumque amet, inventore error quae et harum illum adipisci laboriosam, dolor pariatur debitis alias sunt! Aperiam nemo animi quia dolorum totam accusantium doloribus aliquam expedita. Explicabo natus voluptatum nemo veniam saepe reprehenderit, qui, consectetur illo enim illum ducimus consequuntur.</i></p>
+                <p class="pb-4 hidden fs-5"><i>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem maiores earum corporis omnis. Fuga consequatur eos facilis deserunt quo quia voluptas. Cumque amet, inventore error quae et harum illum adipisci laboriosam, dolor pariatur debitis alias sunt! Aperiam nemo animi quia dolorum totam accusantium doloribus aliquam expedita. Explicabo natus voluptatum nemo veniam saepe reprehenderit, qui, consectetur illo enim illum ducimus consequuntur.</i></p>
             </div>
             <img src="assets/coffee_beans_in_a_bag_small.webp" class="hidden" alt="Open bag of coffee beans" srcset="assets/coffee_beans_in_a_bag_large.webp 1200w, assets/coffee_beans_in_a_bag_medium.webp 700w, assets/coffee_beans_in_a_bag_small.webp 340w" sizes="(min-width: 1200px) 578px, (min-width: 780px) 547px, (min-width: 620px) 434px, calc(80vw - 46px)">
         </div>

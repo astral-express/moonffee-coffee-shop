@@ -21,7 +21,7 @@ export function user_shop_cart() {
 
   const addToCartBtn = document.querySelectorAll(".add-to-cart");
   const addedItemFeedback = document.querySelectorAll(".item-added-feedback");
-
+  const orderAddress = document.getElementById("orderAD");
   const checkoutBtn = document.getElementById("checkout_btn")
   const checkoutCart = window.location.pathname;
 
