@@ -26,6 +26,12 @@ include_once 'head.php';
                     <h2 class='moonffee-font fw-bold text-white mt-3'>Link expired</h2>
                     <h5 class='fw-bold text-white pb-4 m-3'>Link you've opened to change password has expired, please click on Forgot password link if you wish to change your password</h5>
                 </div>";
+            } else if ($_GET["error"] == "loginToPurchase") {
+                echo
+                "<div id='new_user_notification' class='mx-auto bg-danger text-center m-0 hidden'>
+                    <h2 class='moonffee-font fw-bold text-white mt-3'>Login/Registration required!</h2>
+                    <h5 class='fw-bold text-white pb-4 m-3'>You must login or sign in <a href='user_sign_in.php' class='text-white'>(click here to sign in)</a> to add items to cart and purchase them!</h5>
+                </div>";
             }
         }
         ?>

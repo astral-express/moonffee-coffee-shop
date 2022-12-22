@@ -13,7 +13,7 @@ include_once 'includes/user_profile.inc.php';
             </h4>
             <hr class="m-2">
             <p class="fw-bold fs-5 text-center text-red">This action will delete your profile and all of your data!</p>
-            <button id="warningModal"type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteProfileModal">
+            <button id="warning_modal_btn" type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteProfileModal">
                 Delete your profile
             </button>
             <a href="user_profile.php" type='button' class='input-group-text btn btn-secondary mt-2'>Return to profile</a>
@@ -36,16 +36,17 @@ include_once 'includes/user_profile.inc.php';
                                 <span class="input-group-text" id="password-toggle-icon"><i id="eye" class="fa fa-eye-slash" aria-hidden="true"></i></span>
                             </div>
                             <?php
-                            // Auto open modal if pwd is incorrect
+                            // auto open modal if pwd is incorrect
                             if (isset($_GET["error"])) {
                                 if ($_GET["error"] == "pwdMismatch") {
                                     echo 
                                     "<script>
-                                    $(document).ready(function() {
-                                        $('#warningModal').click();
-                                    });
+                                        $(document).ready(function() {
+                                            $('#warning_modal_btn').click();
+                                        });
                                     </script>";
-                                    echo "<p class='fw-bold text-danger text-center mb-3'>Incorrect password!</p>";
+                                    echo 
+                                    "<p class='fw-bold text-danger text-center mb-3'>Incorrect password!</p>";
                                 }
                             }
                             ?>

@@ -9,7 +9,10 @@ include_once 'header.php';
             <h3 class="moonffee-font fw-bold">Coffee shop</h3>
             <hr>
             <p class="fw-bold fs-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque officia, laudantium quidem exercitationem nemo quod in assumenda harum ea debitis? Dolores, quidem autem corrupti maiores iusto recusandae voluptate.</p>
-            <a href="#" class="btn btn-dark rounded-pill border border-white fw-bold p-3 px-4 my-3 mt-3">READ MORE</a>
+            <a href="#read-more-landing" class="btn btn-dark rounded-pill border border-white fw-bold p-3 px-4 my-3 mt-3" role="button">SCROLL DOWN TO READ MORE ABOUT US</a>
+            <div>
+                <i class="fa-solid fa-chevron-down fa-5x fa-beat-fade" style="--fa-beat-fade-opacity: 0.67; --fa-beat-fade-scale: 1.075;"></i>
+            </div>
         </div>
     </div>
 </section>
@@ -19,7 +22,7 @@ include_once 'header.php';
         <div class="text-center">
             <h1 class="moonffee-font fw-bold display-3 hidden">The family-owned coffee shop</h1>
             <p class="text-secondary fs-5 my-4 v hidden"><i>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate velit ipsum, illum quod maiores minima numquam alias quo natus quia voluptates voluptatum omnis non perspiciatis sint delectus iure officia impedit ipsa architecto repellendus eaque consequuntur quaerat. Fugit iusto ratione eligendi?</i></p>
-            <a href="#" class="btn btn-dark rounded-pill border border-white fw-bold p-3 px-4 my-3 mt-3 hidden">OUR VALUES</a>
+            <a href="#" class="btn btn-dark rounded-pill border border-white fw-bold p-3 px-4 my-3 mt-3" role="button">OUR VALUES</a>
         </div>
     </div>
 </section>
@@ -76,7 +79,7 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€3.25<span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <a href="/shop.php#moonffee_shop_coffee" class="btn btn-dark rounded-pill border border-white ms-auto">Order</a>
+                            <a href="/shop.php" class="btn btn-dark rounded-pill border border-white ms-auto">Order</a>
                         </div>
                     </div>
                 </div>
@@ -90,7 +93,7 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€5.00<span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <a href="/shop.php#moonffee_shop_coffee" class="btn btn-dark rounded-pill border border-white ms-auto">Order</a>
+                            <a href="/shop.php" class="btn btn-dark rounded-pill border border-white ms-auto">Order</a>
                         </div>
                     </div>
                 </div>
@@ -104,7 +107,7 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€7.45<span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <a href="/shop.php#moonffee_shop_coffee" class="btn btn-dark rounded-pill border border-white ms-auto">Order</a>
+                            <a href="/shop.php" class="btn btn-dark rounded-pill border border-white ms-auto">Order</a>
                         </div>
                     </div>
                 </div>
@@ -118,7 +121,7 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€2.85<span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <a href="/shop.php#moonffee_shop_coffee" class="btn btn-dark rounded-pill border border-white ms-auto">Order</a>
+                            <a href="/shop.php" class="btn btn-dark rounded-pill border border-white ms-auto">Order</a>
                         </div>
                     </div>
                 </div>
@@ -132,7 +135,7 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€4.45<span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <a href="/shop.php#moonffee_shop_coffee" class="btn btn-dark rounded-pill border border-white ms-auto">Order</a>
+                            <a href="/shop.php" class="btn btn-dark rounded-pill border border-white ms-auto">Order</a>
                         </div>
                     </div>
                 </div>
@@ -146,7 +149,7 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€10.15<span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <a href="/shop.php#moonffee_shop_coffee" class="btn btn-dark rounded-pill border border-white ms-auto">Order</a>
+                            <a href="/shop.php" class="btn btn-dark rounded-pill border border-white ms-auto">Order</a>
                         </div>
                     </div>
                 </div>
@@ -238,7 +241,7 @@ include_once 'header.php';
     </div>
 </section>
 
-<section id="moonffee_shop_info">
+<section id="moonffee_shop_info" class="d-flex justify-content-center align-items-center">
     <div class="container p-5">
         <div class="d-flex flex-column flex-md-row text-white justify-content-center align-items-center">
             <div class="moonffee-work-time text-center fw-bold p-5 fs-5 hidden">

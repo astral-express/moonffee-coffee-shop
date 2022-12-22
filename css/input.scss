@@ -76,24 +76,19 @@ body {
   position: relative;
   background: linear-gradient(rgba(248, 223, 197), rgba(0, 0, 0, 0.6)),
     url(../assets/hero.webp) center top no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-box {
   border: 4px solid colors.$bisque;
   background-color: rgba(0, 0, 0, 0.2);
   color: colors.$seashell;
-  padding: 4em;
+  padding: 4em 4em 2em 4em;
   border-radius: 1em;
   margin: 15em;
   @media (max-width: 1024px) {
     margin: 0 0;
-  }
-}
-
-#moonffee_short_about {
-  padding: 0 28em;
-  @media (max-width: 1024px) {
-    padding: 0 0;
   }
 }
 
@@ -512,6 +507,7 @@ body {
 }
 
 #welcome img {
+  width: 25em;
   @media (max-width: 768px) {
     width: 100%;
     height: 100%;
@@ -559,4 +555,25 @@ body {
 
 .item-added-feedback > p {
   margin: 0;
+}
+
+.form-check {
+  align-items: center;
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.billing-address {
+  align-items: center;
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.add-to-cart:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(2px);
 }

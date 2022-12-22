@@ -1,4 +1,4 @@
-// Disable submit message button if text area is empty
+// disable submit message button if text area is empty
 export function user_delete_message_input() {
   $("#submitMessageBtn").attr("disabled", true);
   $("textarea").on("keyup", function () {
@@ -8,7 +8,7 @@ export function user_delete_message_input() {
   });
 }
 
-// Disable verify btn if input area is empty
+// disable verify button if input area is empty
 export function user_code_input() {
   $("#submitVerCodeBtn").attr("disabled", true);
   $("#verCodeInput").on("keyup", function () {

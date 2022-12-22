@@ -37,4 +37,3 @@ if (isset($_POST["updateProfile"])) {
     session_regenerate_id();
     header("location: ../user_profile.php?success=profileUpdated");
 } else exit(header("location: ../user_profile_edit_info.php?error=updateFailed"));
-// possible optimization on this page

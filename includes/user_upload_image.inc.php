@@ -24,7 +24,7 @@ if (isset($_POST['submitUserImageUpload'])) {
         $fileNameNew = $userID . '.' . $fileActualExt;
         $fileDestination = '../uploads/' . $fileNameNew;
         move_uploaded_file($fileTmpName, $fileDestination);
-        mysqli_query($conn, "UPDATE users_upload SET uploadstatus = 1, userUploadImageData = '$fileNameNew' WHERE userID = '$userID';")
+        mysqli_query($conn, "UPDATE users_upload SET userUploadStatus = 1, userUploadImageData = '$fileNameNew' WHERE userID = '$userID';")
         or die(header("location: ../user_profile.php?error=stmtFailed")); ;
         exit(header("location: ../user_profile.php?success=fileUploaded"));
     }

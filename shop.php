@@ -3,12 +3,14 @@ include_once 'head.php';
 include_once 'header.php';
 ?>
 
-<section id="moonffee_shop_hero" class="border-bottom">
+<section id="moonffee_shop_hero" class="border-bottom border-white">
     <div class="container p-5 pt-4">
         <div id="welcome" class="text-center mb-5 hidden">
             <img src="assets/welcome.webp" alt="Welcome">
         </div>
-        <h4 class="moonffee-font text-white display-4 text-center mb-4 hidden">Check out our other products!</h4>
+        <h4 class="moonffee-font text-white display-4 text-center mb-2 hidden">Welcome to our online shop!</h4>
+        <h6 class="moonffee-font text-white display-6 text-center mb-2 hidden">Scroll down to check out our other products</h6>
+        <p class="text-center m-0 mb-3"><i class="fa-solid fa-chevron-down fa-4x fa-beat-fade text-white" style="--fa-beat-fade-opacity: 0.67; --fa-beat-fade-scale: 1.075;"></i></p>
         <div id="shop_item_categories" class="row row-cols-auto row-cols-lg-4">
             <div class="shop-item col hidden">
                 <div class="moonffee_shop_items text-white m-3 p-4">
@@ -44,7 +46,20 @@ include_once 'header.php';
             </div>
         </div>
 </section>
-
+<?php
+if (!isset($_SESSION["userName"])) {
+    echo '
+    <section id="user-must-login" class="bg-info text-dark">
+        <div class="container">
+            <h3 class="moonffee-font fw-bold text-center m-0 p-3 pb-0">If you wish to add items to your cart and purchase, you need to <a href="user_login.php" class="text-dark">Login</a> or <a href="user_sign_in.php" class="text-dark">Sign In</a> first!</h3>
+            <div class="d-flex justify-content-center align-items-center m-0 p-0">
+                <a href="user_login.php" class="btn btn-dark rounded-pill border border-white fw-bold p-2 px-4 my-3 me-1">Login</a>
+                <a href="user_sign_in.php" class="btn btn-dark rounded-pill border border-white fw-bold p-2 px-4 my-3 ms-1">Sign In</a>
+            </div>
+        </div>
+    </section>';
+}
+?>
 <section id="moonffee_shop_coffee">
     <div id="moonffee_shop_coffee_background" class="d-flex flex-column justify-content-center align-items-center p-5">
         <h1 class="moonffee-font fw-bold display-3 text-center my-3 text-white hidden">Our Coffee</h1>
@@ -61,7 +76,11 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€<span class="shop-item-price">3.25</span><span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="1">Add</button>
+                            <?php
+                            if (!isset($_SESSION["userName"])) {
+                                echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="1" disabled >Add to cart</button>';
+                            } else echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="1">Add to cart</button>'
+                            ?>
                         </div>
                         <div class="item-added-feedback my-2 fw-bold text-success" data-item-id="1"></div>
                     </div>
@@ -75,8 +94,12 @@ include_once 'header.php';
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
                         <hr>
                         <div class="d-flex align-items-center">
-                            <h5 class="moonffee-font fw-bold align-items-center">€<span class="shop-item-price">5.00</span><span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="2">Add</button>
+                            <h5 class="moonffee-font fw-bold align-items-center">€<span class="shop-item-price">5</span><span class="text-secondary ms-1 fs-6"> per cup</span></h5>
+                            <?php
+                            if (!isset($_SESSION["userName"])) {
+                                echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="2" disabled >Add to cart</button>';
+                            } else echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="2">Add to cart</button>'
+                            ?>
                         </div>
                         <div class="item-added-feedback my-2 fw-bold text-success" data-item-id="2"></div>
                     </div>
@@ -91,7 +114,11 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€<span class="shop-item-price">7.45</span><span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="3">Add</button>
+                            <?php
+                            if (!isset($_SESSION["userName"])) {
+                                echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="3" disabled >Add to cart</button>';
+                            } else echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="3">Add to cart</button>'
+                            ?>
                         </div>
                         <div class="item-added-feedback my-2 fw-bold text-success" data-item-id="3"></div>
                     </div>
@@ -106,7 +133,11 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€<span class="shop-item-price">2.85</span><span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="4">Add</button>
+                            <?php
+                            if (!isset($_SESSION["userName"])) {
+                                echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="4" disabled >Add to cart</button>';
+                            } else echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="4">Add to cart</button>'
+                            ?>
                         </div>
                         <div class="item-added-feedback my-2 fw-bold text-success" data-item-id="4"></div>
                     </div>
@@ -121,7 +152,11 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€<span class="shop-item-price">4.45</span><span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="5">Add</button>
+                            <?php
+                            if (!isset($_SESSION["userName"])) {
+                                echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="5" disabled >Add to cart</button>';
+                            } else echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="5">Add to cart</button>'
+                            ?>
                         </div>
                         <div class="item-added-feedback my-2 fw-bold text-success" data-item-id="5"></div>
                     </div>
@@ -136,7 +171,11 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€<span class="shop-item-price">10.15</span><span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="6">Add</button>
+                            <?php
+                            if (!isset($_SESSION["userName"])) {
+                                echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="6" disabled >Add to cart</button>';
+                            } else echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="6">Add to cart</button>'
+                            ?>
                         </div>
                         <div class="item-added-feedback my-2 fw-bold text-success" data-item-id="6"></div>
                     </div>
@@ -151,7 +190,11 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€<span class="shop-item-price">2.85</span><span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="7">Add</button>
+                            <?php
+                            if (!isset($_SESSION["userName"])) {
+                                echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="7" disabled >Add to cart</button>';
+                            } else echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="7">Add to cart</button>'
+                            ?>
                         </div>
                         <div class="item-added-feedback my-2 fw-bold text-success" data-item-id="7"></div>
                     </div>
@@ -166,7 +209,11 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€<span class="shop-item-price">4.45</span><span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="8">Add</button>
+                            <?php
+                            if (!isset($_SESSION["userName"])) {
+                                echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="8" disabled >Add to cart</button>';
+                            } else echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="8">Add to cart</button>'
+                            ?>
                         </div>
                         <div class="item-added-feedback my-2 fw-bold text-success" data-item-id="8"></div>
                     </div>
@@ -181,7 +228,11 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€<span class="shop-item-price">10.15</span><span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="9">Add</button>
+                            <?php
+                            if (!isset($_SESSION["userName"])) {
+                                echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="9" disabled >Add to cart</button>';
+                            } else echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="9">Add to cart</button>'
+                            ?>
                         </div>
                         <div class="item-added-feedback my-2 fw-bold text-success" data-item-id="9"></div>
                     </div>
@@ -196,7 +247,11 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€<span class="shop-item-price">2.85</span><span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="10">Add</button>
+                            <?php
+                            if (!isset($_SESSION["userName"])) {
+                                echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="10" disabled >Add to cart</button>';
+                            } else echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="10">Add to cart</button>'
+                            ?>
                         </div>
                         <div class="item-added-feedback my-2 fw-bold text-success" data-item-id="10"></div>
                     </div>
@@ -211,7 +266,11 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€<span class="shop-item-price">4.45</span><span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="11">Add</button>
+                            <?php
+                            if (!isset($_SESSION["userName"])) {
+                                echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="11" disabled >Add to cart</button>';
+                            } else echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="11">Add to cart</button>'
+                            ?>
                         </div>
                         <div class="item-added-feedback my-2 fw-bold text-success" data-item-id="11"></div>
                     </div>
@@ -226,7 +285,11 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€<span class="shop-item-price">10.15</span><span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="12">Add</button>
+                            <?php
+                            if (!isset($_SESSION["userName"])) {
+                                echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="12" disabled >Add to cart</button>';
+                            } else echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="12">Add to cart</button>'
+                            ?>
                         </div>
                         <div class="item-added-feedback my-2 fw-bold text-success" data-item-id="12"></div>
                     </div>
@@ -252,7 +315,11 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€<span class="shop-item-price">3.25</span><span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="13">Add</button>
+                            <?php
+                            if (!isset($_SESSION["userName"])) {
+                                echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="13" disabled >Add to cart</button>';
+                            } else echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="13">Add to cart</button>'
+                            ?>
                         </div>
                         <div class="item-added-feedback my-2 fw-bold text-success" data-item-id="13"></div>
                     </div>
@@ -266,8 +333,12 @@ include_once 'header.php';
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
                         <hr>
                         <div class="d-flex align-items-center">
-                            <h5 class="moonffee-font fw-bold align-items-center">€<span class="shop-item-price">5.00</span><span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="14">Add</button>
+                            <h5 class="moonffee-font fw-bold align-items-center">€<span class="shop-item-price">5</span><span class="text-secondary ms-1 fs-6"> per cup</span></h5>
+                            <?php
+                            if (!isset($_SESSION["userName"])) {
+                                echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="14" disabled >Add to cart</button>';
+                            } else echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="14">Add to cart</button>'
+                            ?>
                         </div>
                         <div class="item-added-feedback my-2 fw-bold text-success" data-item-id="14"></div>
                     </div>
@@ -282,7 +353,11 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€<span class="shop-item-price">7.45</span><span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="15">Add</button>
+                            <?php
+                            if (!isset($_SESSION["userName"])) {
+                                echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="15" disabled >Add to cart</button>';
+                            } else echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="15">Add to cart</button>'
+                            ?>
                         </div>
                         <div class="item-added-feedback my-2 fw-bold text-success" data-item-id="15"></div>
                     </div>
@@ -297,7 +372,11 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€<span class="shop-item-price">2.85</span><span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="16">Add</button>
+                            <?php
+                            if (!isset($_SESSION["userName"])) {
+                                echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="16" disabled >Add to cart</button>';
+                            } else echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="16">Add to cart</button>'
+                            ?>
                         </div>
                         <div class="item-added-feedback my-2 fw-bold text-success" data-item-id="16"></div>
                     </div>
@@ -323,7 +402,11 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€<span class="shop-item-price">3.25</span><span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="17">Add</button>
+                            <?php
+                            if (!isset($_SESSION["userName"])) {
+                                echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="17" disabled >Add to cart</button>';
+                            } else echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="17">Add to cart</button>'
+                            ?>
                         </div>
                         <div class="item-added-feedback my-2 fw-bold text-success" data-item-id="17"></div>
                     </div>
@@ -337,8 +420,12 @@ include_once 'header.php';
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
                         <hr>
                         <div class="d-flex align-items-center">
-                            <h5 class="moonffee-font fw-bold align-items-center">€<span class="shop-item-price">5.00</span><span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="18">Add</button>
+                            <h5 class="moonffee-font fw-bold align-items-center">€<span class="shop-item-price">5</span><span class="text-secondary ms-1 fs-6"> per cup</span></h5>
+                            <?php
+                            if (!isset($_SESSION["userName"])) {
+                                echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="18" disabled >Add to cart</button>';
+                            } else echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="18">Add to cart</button>'
+                            ?>
                         </div>
                         <div class="item-added-feedback my-2 fw-bold text-success" data-item-id="18"></div>
                     </div>
@@ -353,7 +440,11 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€<span class="shop-item-price">7.45</span><span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="19">Add</button>
+                            <?php
+                            if (!isset($_SESSION["userName"])) {
+                                echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="19" disabled >Add to cart</button>';
+                            } else echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="19">Add to cart</button>'
+                            ?>
                         </div>
                         <div class="item-added-feedback my-2 fw-bold text-success" data-item-id="19"></div>
                     </div>
@@ -368,7 +459,11 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€<span class="shop-item-price">2.85</span><span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="20">Add</button>
+                            <?php
+                            if (!isset($_SESSION["userName"])) {
+                                echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="20" disabled >Add to cart</button>';
+                            } else echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="20">Add to cart</button>'
+                            ?>
                         </div>
                         <div class="item-added-feedback my-2 fw-bold text-success" data-item-id="20"></div>
                     </div>
@@ -383,7 +478,11 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€<span class="shop-item-price">4.45</span><span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="21">Add</button>
+                            <?php
+                            if (!isset($_SESSION["userName"])) {
+                                echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="21" disabled >Add to cart</button>';
+                            } else echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="21">Add to cart</button>'
+                            ?>
                         </div>
                         <div class="item-added-feedback my-2 fw-bold text-success" data-item-id="21"></div>
                     </div>
@@ -398,7 +497,11 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€<span class="shop-item-price">10.15</span><span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="22">Add</button>
+                            <?php
+                            if (!isset($_SESSION["userName"])) {
+                                echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="22" disabled >Add to cart</button>';
+                            } else echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="22">Add to cart</button>'
+                            ?>
                         </div>
                         <div class="item-added-feedback my-2 fw-bold text-success" data-item-id="22"></div>
                     </div>
@@ -424,7 +527,11 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€<span class="shop-item-price">3.25</span><span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="23">Add</button>
+                            <?php
+                            if (!isset($_SESSION["userName"])) {
+                                echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="23" disabled >Add to cart</button>';
+                            } else echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="23">Add to cart</button>'
+                            ?>
                         </div>
                         <div class="item-added-feedback my-2 fw-bold text-success" data-item-id="23"></div>
                     </div>
@@ -438,8 +545,12 @@ include_once 'header.php';
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
                         <hr>
                         <div class="d-flex align-items-center">
-                            <h5 class="moonffee-font fw-bold align-items-center">€<span class="shop-item-price">5.00</span><span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="24">Add</button>
+                            <h5 class="moonffee-font fw-bold align-items-center">€<span class="shop-item-price">5</span><span class="text-secondary ms-1 fs-6"> per cup</span></h5>
+                            <?php
+                            if (!isset($_SESSION["userName"])) {
+                                echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="24" disabled >Add to cart</button>';
+                            } else echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="24">Add to cart</button>'
+                            ?>
                         </div>
                         <div class="item-added-feedback my-2 fw-bold text-success" data-item-id="24"></div>
                     </div>
@@ -454,7 +565,11 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€<span class="shop-item-price">7.45</span><span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="25">Add</button>
+                            <?php
+                            if (!isset($_SESSION["userName"])) {
+                                echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="25" disabled >Add to cart</button>';
+                            } else echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="25">Add to cart</button>'
+                            ?>
                         </div>
                         <div class="item-added-feedback my-2 fw-bold text-success" data-item-id="25"></div>
                     </div>
@@ -469,7 +584,11 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€<span class="shop-item-price">2.85</span><span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="26">Add</button>
+                            <?php
+                            if (!isset($_SESSION["userName"])) {
+                                echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="26" disabled >Add to cart</button>';
+                            } else echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="26">Add to cart</button>'
+                            ?>
                         </div>
                         <div class="item-added-feedback my-2 fw-bold text-success" data-item-id="26"></div>
                     </div>
@@ -495,7 +614,11 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€<span class="shop-item-price">3.25</span><span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="27">Add</button>
+                            <?php
+                            if (!isset($_SESSION["userName"])) {
+                                echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="27" disabled >Add to cart</button>';
+                            } else echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="27">Add to cart</button>'
+                            ?>
                         </div>
                         <div class="item-added-feedback my-2 fw-bold text-success" data-item-id="27"></div>
                     </div>
@@ -509,8 +632,12 @@ include_once 'header.php';
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
                         <hr>
                         <div class="d-flex align-items-center">
-                            <h5 class="moonffee-font fw-bold align-items-center">€<span class="shop-item-price">5.00</span><span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="28">Add</button>
+                            <h5 class="moonffee-font fw-bold align-items-center">€<span class="shop-item-price">5</span><span class="text-secondary ms-1 fs-6"> per cup</span></h5>
+                            <?php
+                            if (!isset($_SESSION["userName"])) {
+                                echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="28" disabled >Add to cart</button>';
+                            } else echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="28">Add to cart</button>'
+                            ?>
                         </div>
                         <div class="item-added-feedback my-2 fw-bold text-success" data-item-id="28"></div>
                     </div>
@@ -525,7 +652,11 @@ include_once 'header.php';
                         <hr>
                         <div class="d-flex align-items-center">
                             <h5 class="moonffee-font fw-bold align-items-center">€<span class="shop-item-price">7.45</span><span class="text-secondary ms-1 fs-6"> per cup</span></h5>
-                            <button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="29">Add</button>
+                            <?php
+                            if (!isset($_SESSION["userName"])) {
+                                echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="29" disabled >Add to cart</button>';
+                            } else echo '<button class="btn btn-dark rounded-pill border border-white ms-auto add-to-cart" data-item-id="29">Add to cart</button>'
+                            ?>
                         </div>
                         <div class="item-added-feedback my-1 fw-bold text-success" data-item-id="29"></div>
                     </div>

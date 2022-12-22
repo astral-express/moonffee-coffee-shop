@@ -1,4 +1,4 @@
-// Show-hide password eye icon
+// show-hide password with eye icon
 export function password_toggle_icon() {
   $("#show_hide_password span").on("click", function () {
     if ($("#show_hide_password input").attr("type") == "text") {
@@ -13,7 +13,7 @@ export function password_toggle_icon() {
   });
 }
 
-// Show-hide password checkbox for inputs
+// show-hide password with checkbox for inputs
 export function password_toggle_checkbox() {
   $("#show_hide_password_checkbox").change(function () {
     if (this.checked)

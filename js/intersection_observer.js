@@ -1,4 +1,5 @@
 export function intersection_observer() {
+  // if a pixel of an element that has hidden class is on the screen, add class show
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {

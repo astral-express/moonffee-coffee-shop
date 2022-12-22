@@ -1,4 +1,4 @@
-// Sidebar for user profile
+// navbar for user profile settings
 export function profile_navbar() {
   const currentURL = window.location.href;
   const sideBarItem = document.querySelectorAll(".profile-navbar-link");

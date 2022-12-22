@@ -1,22 +1,34 @@
 export function user_shop_cart() {
+  // if there are any items in local storage, parse them into variable
   let itemsInCart = JSON.parse(localStorage.getItem('userCartItems'));
 
+  // if cart is empty, make an empty array
   if(!itemsInCart) {
     itemsInCart = [];
   }
 
+  // elem selectors
   const parentEl = document.querySelector(".shopping-cart");
   const checkoutEl = document.querySelector(".checkout-cart");
+
   const cartTotalPrice = document.querySelector("#sum_price");
+
   const checkoutProductsSum = document.querySelector("#checkout_products_sum_price");
   const checkoutFinalPrice = document.querySelector("#checkout_final_price");
+
   const itemQuantity = document.querySelector("#item_quantity");
   const items = document.querySelectorAll(".shop-item");
+
   const addToCartBtn = document.querySelectorAll(".add-to-cart");
   const addedItemFeedback = document.querySelectorAll(".item-added-feedback");
+
+  const checkoutBtn = document.getElementById("checkout_btn")
   const checkoutCart = window.location.pathname;
 
+  // if first elem is not found, ignore the rest
+  // (first elem in navbar is found when user is logged in)
   if(!(parentEl === null)) {
+    // calculate total price of all items
     const countSumPrice = function () {
         let totalPrice = 0;
         itemsInCart.forEach((item) => {
@@ -25,6 +37,7 @@ export function user_shop_cart() {
         return parseFloat(totalPrice).toFixed(2);
     };
 
+    // calculate total amount of all items (checkout page)
     const totalQuantity = function () {
         let totalQuantity = 0;
         itemsInCart.forEach((item) => {
@@ -33,9 +46,11 @@ export function user_shop_cart() {
         return totalQuantity;
     }
 
+    // updates user's cart on every "add" click
     const updateShoppingCartHTML = function () {
         localStorage.setItem('userCartItems', JSON.stringify(itemsInCart));
         if (itemsInCart.length > 0) {
+            // mapping user's selection and prints it into the navbar cart and checkout cart
             let result = itemsInCart.map((item) => {
             return `
                 <li class="list-group-item shop-item-added-to-cart moonffee-font">
@@ -44,10 +59,11 @@ export function user_shop_cart() {
                                 <img src="${item.image}" alt="Added shop item in a cart" class="">
                             </div>
                             <div class="col-md-8 d-flex align-items-center">
-                                <div class="card-body d-flex justify-content-between align-items-center mt-2">
+                                <div class="card-body d-flex justify-content-between align-items-center">
                                     <div>
                                         <h5 class="shop-item-title card-title moonffee-font fw-bold">${item.name}</h5>
-                                        <p class="card-text fw-bold"><small class="text-muted">Total: €${parseFloat(item.price).toFixed(2)}</small></p>
+                                        <p class="card-text fw-bold m-0"><small class="text-muted">Product: €${item.basePrice}</small></p>
+                                        <p class="card-text fw-bold m-0"><small>Total: €${parseFloat(item.price).toFixed(2)}</small></p>
                                     </div>
                                     <div>
                                         <button class="button-delete btn btn-danger btn-sm" data-id='${item.id}'><i class="fa-solid fa-trash" data-id='${item.id}'></i></button>
@@ -60,7 +76,9 @@ export function user_shop_cart() {
                         </div>
                 </li>`;
         }).join("");
+        // printing in parentEl (navbar user cart)
         parentEl.innerHTML = result;
+        // prints only if the specific page is active
         if (checkoutCart == '/user_checkout.php') {
             checkoutEl.innerHTML = result;
             checkoutProductsSum.innerHTML = "€" + countSumPrice();
@@ -69,12 +87,14 @@ export function user_shop_cart() {
         };
         cartTotalPrice.innerHTML = "€" + countSumPrice() + " |";
         } else {
+            // prints that cart is empty if it's empty
             parentEl.innerHTML = 
             `<h5 class='shop-item-title card-title moonffee-font fw-bold text-center p-3 pb-0'>Your cart is empty!</h5>
             <hr>
             <div class='d-flex align-items-center justify-content-around text-center'>
                 <a class='fw-bold btn btn-outline-dark mb-2' role='button' href='/shop.php'><i class="fa-sharp fa-solid fa-bag-shopping me-2"></i>Go to shop</a> 
             </div>`;
+            // prints for specific page in different element location
             if (checkoutCart == '/user_checkout.php') {
                 checkoutEl.innerHTML = 
                 `<h5 class='shop-item-title card-title moonffee-font fw-bold text-center p-3'>Your cart is empty!</h5>
@@ -90,6 +110,7 @@ export function user_shop_cart() {
         };
     };
 
+    // updates total price and count of the cart
     function updateItemsInCart(items) {
         for (let i = 0; i < itemsInCart.length; i++) {
             if (itemsInCart[i].id == items.id) {
@@ -101,6 +122,7 @@ export function user_shop_cart() {
         itemsInCart.push(items);
     }
 
+    // makes a new object in the array of the products user has clicked on
     items.forEach((item) => {
         item.addEventListener('click', (e) => {
             if (e.target.classList.contains('add-to-cart')) {
@@ -122,6 +144,7 @@ export function user_shop_cart() {
         });
     });
 
+    // gives user feedback that the corresponding item has been added to the cart
     addToCartBtn.forEach((add) => {
         add.addEventListener('click', (e) => {
             const txtEl = document.createElement("p");
@@ -140,12 +163,26 @@ export function user_shop_cart() {
         });
     });
 
+    // clear cart items on purchase
+    if (checkoutCart == '/user_checkout.php') {
+        checkoutBtn.onclick = function() { clearCart() };
+    }
+
+    function clearCart() {
+        localStorage.clear();
+    };
+
+    // event listener for navbar cart shop
     parentEl.addEventListener('click', (e) => {itemButtons(e)});
+
 
     if (checkoutCart == '/user_checkout.php') {
         checkoutEl.addEventListener('click', (e) => {itemButtons(e)});
+        // disable checkout button if cart is empty
+        if (itemsInCart.length === 0) checkoutBtn.disabled = true;
     };
 
+    // function for navbar cart shop, for incrementing, decrementing or removing items from nav cart
     function itemButtons(e) {
         e.stopPropagation();
         const isIncrementBtn = e.target.classList.contains('button-plus');
@@ -169,6 +206,12 @@ export function user_shop_cart() {
                 }
                 if (itemsInCart[i].count <= 0) {
                     itemsInCart.splice(i, 1);
+                };
+                if (checkoutCart == '/user_checkout.php') {
+                    if (itemsInCart.length === 0) {
+                        checkoutBtn.disabled = true;
+                    } else checkoutBtn.disabled = false;
+                    
                 };
             };
         updateShoppingCartHTML();

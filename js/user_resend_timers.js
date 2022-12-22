@@ -1,30 +1,31 @@
-// Resend timer for the code
+// resend timer for the code
 export function code_resend_timer() {
   $("#resendCodeBtn").attr("disabled", true);
-  var timeleft = 5;
+  var timeLeft = 5;
   var resendTimer = setInterval(function () {
-    if (timeleft <= 0) {
+    if (timeLeft <= 0) {
       clearInterval(resendTimer);
       $("#countdown").html("");
       $("#resendCodeBtn").attr("disabled", false);
     } else {
-      $("#countdown").html("in " + timeleft + "s");
+      $("#countdown").html("in " + timeLeft + "s");
     }
-    timeleft -= 1;
+    timeLeft -= 1;
   }, 1000);
 }
 
+// same resend timer for a different elem
 export function code_resend_timer_for_pwd_reset() {
   $("#resendEmailLinkBtn").attr("disabled", true);
-  var timeleft = 5;
+  var timeLeft = 5;
   var resendTimer = setInterval(function () {
-    if (timeleft <= 0) {
+    if (timeLeft <= 0) {
       clearInterval(resendTimer);
       $("#countdown").html("");
       $("#resendEmailLinkBtn").attr("disabled", false);
     } else {
-      $("#countdown").html("in " + timeleft + "s");
+      $("#countdown").html("in " + timeLeft + "s");
     }
-    timeleft -= 1;
+    timeLeft -= 1;
   }, 1000);
 }

@@ -21,26 +21,26 @@ import { back_to_top } from "./back_to_top.js";
 import { user_shop_cart } from "./user_shop_cart.js";
 
 $(document).ready(function () {
-  // Elem anim on screen appearance
+  // elem anim on screen appearance
   intersection_observer();
-  // Sidebar for user profile
+  // sidebar for user profile
   profile_navbar();
-  // Profile update feedback
+  // profile update feedback
   profile_update_success();
   profile_update_failed();
-  // Show-hide password
+  // show-hide password
   password_toggle_icon();
   password_toggle_checkbox();
-  // Disable submit message button if text area is empty
+  // disable submit message button if text area is empty
   user_delete_message_input();
   user_code_input();
-  // User email tooltip
+  // user email tooltip
   user_profile_email_tooltip();
-  // Resend code timer
+  // resend code timer
   code_resend_timer();
   code_resend_timer_for_pwd_reset();
-  // Back to top button
+  // back to top button
   back_to_top();
-  // Cart shop
+  // cart shop system
   user_shop_cart();
 });
