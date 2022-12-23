@@ -4,6 +4,6 @@ A simple template of a coffee shop site
 
 ## Built With
 
-* [Bootstrap](https://getbootstrap.com/) - Web framework used
+* [Bootstrap](https://getbootstrap.com/) - Web framework
 * [Sass](https://sass-lang.com/) - CSS extension
 * [PHP](https://www.php.net/) - Scripting language
