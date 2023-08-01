@@ -1,6 +1,6 @@
 # Moonffee - Web Coffee Shop Project
 
-My PHP project while learning the scripting language. <br /><br />
+My first PHP project while learning the language. <br /><br />
 Project is hosted on: http://moonffee.mintdev.net/
 
 ## Built with
