@@ -1,9 +1,10 @@
-# Moonffee Coffee Shop Template
+# Moonffee - Web Coffee Shop Project
 
-A simple template of a coffee shop site
+My PHP project while learning the scripting language. <br /><br />
+Project is hosted on: http://moonffee.mintdev.net/
 
-## Built With
+## Built with
 
-* [Bootstrap](https://getbootstrap.com/) - Web framework
-* [Sass](https://sass-lang.com/) - CSS extension
 * [PHP](https://www.php.net/) - Scripting language
+* [Sass](https://sass-lang.com/) - CSS extension
+* [Bootstrap](https://getbootstrap.com/) - Web framework
