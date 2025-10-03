@@ -1,5 +1,6 @@
 *.ini
 *.vscode
 *.yaml
-*.dockerignore
+*.env
+.dockerignore
 Dockerfile
