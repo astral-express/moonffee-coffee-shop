@@ -1,6 +1,6 @@
 <?php
 
-$env = parse_ini_file('../db_config.env');
+$env = parse_ini_file('../.env');
 
 $serverName = $env["MYSQLHOST"];
 $dB_UID = $env["MYSQLUSER"];
