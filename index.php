@@ -9,7 +9,7 @@ include_once 'header.php';
             <h3 class="moonffee-font fw-bold">Coffee shop</h3>
             <hr>
             <p class="fw-bold fs-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque officia, laudantium quidem exercitationem nemo quod in assumenda harum ea debitis? Dolores, quidem autem corrupti maiores iusto recusandae voluptate.</p>
-            <a href="#read-more-landing" class="btn btn-dark rounded-pill border border-white fw-bold p-3 px-4 my-3 mt-3" role="button">SCROLL DOWN TO READ MORE ABOUT US</a>
+            <a href="#moonffee_short_about" class="btn btn-dark rounded-pill border border-white fw-bold p-3 px-4 my-3 mt-3" role="button">SCROLL DOWN TO READ MORE ABOUT US</a>
             <div>
                 <i class="fa-solid fa-chevron-down fa-5x fa-beat-fade" style="--fa-beat-fade-opacity: 0.67; --fa-beat-fade-scale: 1.075;"></i>
             </div>
