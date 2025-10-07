@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 if (isset($_POST["submitLogin"])) {
     $userName_userEmail = $_POST["userName-userEmail"];
     $userPwd = $_POST["userPwd"];

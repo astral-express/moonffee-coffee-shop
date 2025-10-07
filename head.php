@@ -10,8 +10,7 @@ if (isset($_SESSION["userName"])) {
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Favicon warning fix -->
-    <link rel="shortcut icon" href="#">
+    <link rel="shortcut icon" href="assets\moonffee_logo.ico" type="image/x-icon"/>
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

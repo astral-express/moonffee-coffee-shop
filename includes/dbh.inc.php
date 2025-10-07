@@ -1,12 +1,9 @@
 <?php
+define('ROOT_PATH', dirname(__DIR__) . '/');
+$env = parse_ini_file(ROOT_PATH.'.env');
 
-$env = parse_ini_file('../.env');
+// $env = parse_ini_file(ROOT_PATH.'db_test.ini');
 
-$serverName = $env["MYSQLHOST"];
-$dB_UID = $env["MYSQLUSER"];
-$dB_PWD = $env["MYSQLPASSWORD"];
-$dB_Name = $env["MYSQL_DATABASE"];
+$conn = new mysqli($env["MYSQLHOST"], $env["MYSQLUSER"], $env["MYSQLPASSWORD"], $env["MYSQL_DATABASE"]);
 
-$conn = mysqli_connect($serverName, $dB_UID, $dB_PWD, $dB_Name);
-
-if (!$conn) die("Connection failed: " . mysqli_connect_error());
+if ($conn -> connect_error) die(`Connection failed: ` . $conn -> connect_error);
