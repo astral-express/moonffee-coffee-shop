@@ -4,4 +4,3 @@
 *.yaml
 .dockerignore
 *.dockerignore
-Dockerfile
