@@ -2,9 +2,12 @@
 // define('ROOT_PATH', dirname(__DIR__) . '/');
 // $env = parse_ini_file(ROOT_PATH.'.env');
 
-$dsn = "mysql:" . getenv("MYSQLUSER") . ":" . getenv("MYSQLPASSWORD") . "@" . getenv("MYSQLHOST") . ":" . getenv("MYSQLPORT") . "/railway";
+$host = getenv("MYSQLHOST");
+$user = getenv("MYSQLUSER");
+$pass = getenv("MYSQLPASSWORD");
+$db   = getenv("MYSQLDATABASE");
 
-// $conn = new PDO(getenv("MYSQLHOST"), getenv("MYSQLUSER"), getenv("MYSQLPASSWORD"), getenv("MYSQLDATABASE"), getenv("MYSQLPORT"));
-$conn = new PDO($dsn);
+$conn = new mysqli($host, $user, $pass, $db);
+
 
 if (!$conn) die(`Connection failed: ` . $conn);
